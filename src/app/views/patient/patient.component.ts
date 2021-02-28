@@ -29,7 +29,9 @@ export class PatientComponent implements OnInit, OnDestroy {
     };
     this.medicalService.getConfig().subscribe(
       resp=>{
-        this.patients.push(resp as any);
+        (resp as any).data.forEach(e => {
+          this.patients.push(e);
+        });
         this.dtTrigger.next();
       },err=>console.log(err));
   }

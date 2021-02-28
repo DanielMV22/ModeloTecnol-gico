@@ -1,4 +1,12 @@
 {
-    "id":"PC0002",
-    "friendlyName":"DANN"
+    "data":[
+        {
+            "id":"PC0002",
+            "friendlyName":"Effio"
+        },
+        {
+            "id":"PC0003",
+            "friendlyName":"Marcus"
+        }
+    ]
 }
