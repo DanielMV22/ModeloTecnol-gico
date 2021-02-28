@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class MedicalService {
 
-  constructor() { }
+  configUrl = 'assets/json/data.json';
+
+  constructor(private http: HttpClient) { }
+
+  getConfig() {
+    return this.http.get(this.configUrl);
+  }
+
 }

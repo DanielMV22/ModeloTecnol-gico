@@ -44,6 +44,7 @@ import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   imports: [
@@ -62,7 +63,9 @@ import { ChartsModule } from 'ng2-charts';
     IconModule,
     IconSetModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DataTablesModule,
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
