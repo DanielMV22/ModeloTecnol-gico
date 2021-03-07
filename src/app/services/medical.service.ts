@@ -6,12 +6,20 @@ import { Injectable } from '@angular/core';
 })
 export class MedicalService {
 
-  configUrl = 'assets/json/data.json';
+  urlPatient = 'assets/json/patient.json';
 
   constructor(private http: HttpClient) { }
 
-  getConfig() {
-    return this.http.get(this.configUrl);
+  getPatients() {
+    return this.http.get(this.urlPatient);
+  }
+
+  readLocal(name){
+    return JSON.parse(localStorage.getItem(name));
+  }
+  
+  writeLocall(name,item){
+    localStorage.setItem(name,JSON.stringify(item));
   }
 
 }

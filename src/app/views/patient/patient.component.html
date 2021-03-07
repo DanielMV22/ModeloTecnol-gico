@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header">
                     <i class="fa fa-align-justify"></i> Pacientes
-                    <button class="btn btn-primary" style="float: right;" data-toggle="modal">Añadir paciente</button>
+                    <button class="btn btn-primary" style="float: right;" data-toggle="modal" (click)="onNew()">Añadir paciente</button>
                 </div>
                 <div class="card-body">
                     <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover" style="width: 100%;">
@@ -12,7 +12,7 @@
                             <tr>
                                 <th>Identificador</th>
                                 <th>Iniciales</th>
-                                <th>Acciones</th>
+                                <!-- <th>Acciones</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -20,7 +20,7 @@
                                 <tr>
                                     <td>{{user.id}}</td>
                                     <td>{{user.friendlyName}}</td>
-                                    <td>
+                                    <!-- <td>
                                         <div class="btn-group" dropdown (change)="change($event)" placement="top">
                                             <button dropdownToggle type="button" class="btn btn-pill btn-block dropdown-toggle">
                                           Opcion <span class="caret"></span>
@@ -29,7 +29,7 @@
                                                 <li role="menuitem"><a class="dropdown-item" data-toggle="modal" (click)="onEdit(user)">Editar</a></li>
                                             </ul>
                                         </div>
-                                    </td>
+                                    </td> -->
                                 </tr>
                             </ng-container>
                         </tbody>
@@ -39,11 +39,11 @@
         </div>
     </div>
 </div>
-<!-- <div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Editar Paciente</h4>
+                <h4 class="modal-title">Agregar Paciente</h4>
                 <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -51,35 +51,12 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col form-group">
-                        <label for="names">Nombres</label>
-                        <input type="text" class="form-control" id="names" [(ngModel)]="patientEdit.names">
+                        <label for="id">Identificador</label>
+                        <input type="text" class="form-control" id="id" [(ngModel)]="patientNew.id">
                     </div>
                     <div class="col form-group">
-                        <label for="last_names">Nombres</label>
-                        <input type="text" class="form-control" id="last_names" [(ngModel)]="patientEdit.last_names">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col form-group">
-                        <label for="phone">Telefono</label>
-                        <input type="tel" class="form-control" id="phone" [(ngModel)]="patientEdit.phone">
-                    </div>
-                    <div class="col form-group">
-                        <label for="email">Correo</label>
-                        <input type="email" class="form-control" id="email" [(ngModel)]="patientEdit.email">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col form-group">
-                        <label for="document_type">Tipo de documento</label>
-                        <select class="form-control" id="document_type" [(ngModel)]="patientEdit.document_type">
-                            <option value="DNI">DNI</option>
-                            <option value="CarnetExtranjeria">Carnet de extranjeria</option>
-                            </select>
-                    </div>
-                    <div class="col form-group">
-                        <label for="docuemnt_number">Numero de documento</label>
-                        <input type="text" class="form-control" id="docuemnt_number" [(ngModel)]="patientEdit.document_number">
+                        <label for="initial">Iniciales</label>
+                        <input type="text" class="form-control" id="initial" [(ngModel)]="patientNew.friendlyName">
                     </div>
                 </div>
             </div>
@@ -89,4 +66,4 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>

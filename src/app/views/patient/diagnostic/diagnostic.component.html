@@ -1,0 +1,160 @@
+<div class="animated fadeIn">
+    <div class="row" *ngIf="isPatient">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Diagnóstico</strong>
+                </div>
+                <div class="card-body">
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="patient">Paciente</label>
+                            <div class="col-md-9">
+                                <select class="form-control" id="patient" [(ngModel)]="patient" name="patient">
+                                    <option *ngFor="let pat of patientList" [value]="pat.id">{{pat.friendlyName}}
+                                    </option>
+                                </select>
+                                <span *ngIf="required" class="help-block">*Campo requerido</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="patientid">Paciente</label>
+                            <div class="col-md-9">
+                                <input type="text" id="patientid" [(ngModel)]="patientid" name="patientid" class="form-control"
+                                    placeholder="Ingrese iniciales del paciente..">
+                                <!-- <span *ngIf="required" class="help-block">*Campo requerido</span> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-sm btn-primary" (click)="onCards()">
+                        <i class="fa fa-dot-circle-o"></i>
+                        Aceptar?</button>
+                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!isPatient">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Basic Form</strong> Elements
+                </div>
+                <div class="card-body">
+                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Radios</label>
+                            <div class="col-md-9 col-form-label">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radios" id="radio1"
+                                        value="option1" checked>
+                                    <label class="form-check-label" for="radio1">
+                                        Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radios" id="radio2"
+                                        value="option2">
+                                    <label class="form-check-label" for="radio2">
+                                        Option 2
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radios" id="radio3"
+                                        value="option3">
+                                    <label class="form-check-label" for="radio3">
+                                        Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="inline-radios">Inline Radios</label>
+                            <div class="col-md-9 col-form-label">
+                                <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                    <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio1"
+                                        value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">One</label>
+                                </div>
+                                <div class="form-check form-check-inline mr-1">
+                                    <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio2"
+                                        value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Two</label>
+                                </div>
+                                <div class="form-check form-check-inline mr-1">
+                                    <input class="form-check-input" type="radio" name="inline-radios" id="inlineRadio3"
+                                        value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">Three</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Checkboxes</label>
+                            <div class="col-md-9 col-form-label">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="option1" id="checkbox1">
+                                    <label class="form-check-label" for="checkbox1">
+                                        Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="option1" id="checkbox2">
+                                    <label class="form-check-label" for="checkbox2">
+                                        Option 2
+                                    </label>
+                                </div>
+                                <div class="form-check checkbox">
+                                    <input class="form-check-input" type="checkbox" value="option1" id="checkbox3">
+                                    <label class="form-check-label" for="checkbox3">
+                                        Option 3
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Inline Checkboxes</label>
+                            <div class="col-md-9 col-form-label">
+                                <div class="form-check form-check-inline mr-1">
+                                    <input class="form-check-input" type="checkbox" id="inline-checkbox1"
+                                        value="option1">
+                                    <label class="form-check-label" for="inline-checkbox1">One</label>
+                                </div>
+                                <div class="form-check form-check-inline mr-1">
+                                    <input class="form-check-input" type="checkbox" id="inline-checkbox2"
+                                        value="option2">
+                                    <label class="form-check-label" for="inline-checkbox2">Two</label>
+                                </div>
+                                <div class="form-check form-check-inline mr-1">
+                                    <input class="form-check-input" type="checkbox" id="inline-checkbox3"
+                                        value="option3">
+                                    <label class="form-check-label" for="inline-checkbox3">Three</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="file-input">File input</label>
+                            <div class="col-md-9">
+                                <input type="file" id="file-input" name="file-input">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple File input</label>
+                            <div class="col-md-9">
+                                <input type="file" id="file-multiple-input" name="file-multiple-input" multiple>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i>
+                        Aceptar</button>
+                    <button type="reset" class="btn btn-sm btn-danger" (click)="onBack()">
+                        <i class="fa fa-ban"></i> Regresar</button>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+    </div>
+</div>
