@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { General,Sign,Symptom,LabResult } from '../../../models/all';
 import { MedicalService } from '../../../services/medical.service';
 
 @Component({
@@ -10,8 +11,19 @@ export class DiagnosticComponent implements OnInit {
   patient;
   patientList=[];
   localPatient:any;
-  patientid;
   required=false;
+
+  disease;
+  diseaseList=[
+    {id:0,name:'Leucemia Linfocítica Aguda - (ALL/LBL)'},
+    {id:1,name:'Leucemia Mielógena Aguda - (AML)'}
+  ];
+
+  /*CARDS ALL*/
+  general : General = new General;
+  sign : Sign = new Sign;
+  symptom : Symptom = new Symptom;
+  labResult : LabResult = new LabResult;
 
   constructor(private medicalService: MedicalService) {
     this.localPatient = medicalService.readLocal("patient");
@@ -38,10 +50,6 @@ export class DiagnosticComponent implements OnInit {
       this.required=true;
       return;
     }
-    // if(!this.patientid) {
-    //   this.required=true;
-    //   return;
-    // }
     this.isPatient=false;
     this.required=false;
     console.log(this.patient);
@@ -49,6 +57,17 @@ export class DiagnosticComponent implements OnInit {
 
   onBack(){
     this.isPatient=true;
+    this.general=new General;
+    this.sign=new Sign;
+    this.symptom=new Symptom;
+    this.labResult=new LabResult;
+  }
+
+  onSendCards(){    
+    console.log(this.general);
+    console.log(this.sign);
+    console.log(this.symptom);
+    console.log(this.labResult);
   }
 
 }

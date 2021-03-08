@@ -8,9 +8,10 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { DataTablesModule } from 'angular-datatables';
 import { DiagnosticComponent } from './diagnostic/diagnostic.component';
 import { TreatmentComponent } from './treatment/treatment.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
-  declarations: [PatientComponent, DiagnosticComponent, TreatmentComponent],
+  declarations: [PatientComponent, DiagnosticComponent, TreatmentComponent, TicketComponent],
   imports: [
     CommonModule,
     FormsModule,

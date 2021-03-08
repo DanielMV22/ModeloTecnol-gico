@@ -7,11 +7,16 @@ import { Injectable } from '@angular/core';
 export class MedicalService {
 
   urlPatient = 'assets/json/patient.json';
+  urlTicket = 'assets/json/ticket.json';
 
   constructor(private http: HttpClient) { }
 
   getPatients() {
     return this.http.get(this.urlPatient);
+  }
+
+  getTickets() {
+    return this.http.get(this.urlTicket);
   }
 
   readLocal(name){

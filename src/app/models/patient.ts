@@ -5,5 +5,4 @@ export class Patient {
         this.id='',
         this.friendlyName=''
     }
-
 }
