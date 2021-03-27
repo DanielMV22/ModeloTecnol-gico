@@ -13,13 +13,17 @@ export class DiagnosticComponent implements OnInit {
   localPatient:any;
   required=false;
 
+
   disease;
   diseaseList=[
-    {id:0,name:'Leucemia Linfocítica Aguda - (ALL/LBL)'},
-    {id:1,name:'Leucemia Mielógena Aguda - (AML)'}
+    {id:0,name:'Leucemia Linfoblástica Aguda - (ALL)'},
+    {id:1,name:'Leucemia Linfocítica Crónica  - (CLL)'},
+    {id:2,name:'Leucemia Mieloide Aguda  - (AML)'},
+    {id:3,name:'Leucemia Mieloide Crónica - (CML)'}
+
   ];
 
-  /*CARDS ALL*/
+  /*CARDS*/
   general : General = new General;
   sign : Sign = new Sign;
   symptom : Symptom = new Symptom;
@@ -63,7 +67,7 @@ export class DiagnosticComponent implements OnInit {
     this.labResult=new LabResult;
   }
 
-  onSendCards(){    
+  onSendCards(){
     console.log(this.general);
     console.log(this.sign);
     console.log(this.symptom);

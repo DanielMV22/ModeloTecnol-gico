@@ -36,7 +36,7 @@ export class PatientComponent implements OnInit, OnDestroy {
       });
       setTimeout(()=> {
         this.dtTrigger.next();
-    }, 1000); 
+    }, 1000);
     } else {
       this.medicalService.getPatients().subscribe(
         resp => {
@@ -52,15 +52,7 @@ export class PatientComponent implements OnInit, OnDestroy {
     this.dtTrigger.unsubscribe();
   }
 
-  // toggleDropdown($event: MouseEvent): void {
-  //   $event.preventDefault();
-  //   $event.stopPropagation();
-  //   this.status.isOpen = !this.status.isOpen;
-  // }
 
-  // change(value: boolean): void {
-  //   this.status.isOpen = value;
-  // }
 
   onNew() {
     this.patientNew = new Patient();
