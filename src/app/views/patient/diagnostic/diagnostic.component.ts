@@ -3,7 +3,8 @@ import { General,Sign,Symptom,LabResult } from '../../../models/all';
 import { MedicalService } from '../../../services/medical.service';
 
 @Component({
-  templateUrl: './diagnostic.component.html'
+  templateUrl: './diagnostic.component.html',
+  styleUrls: ['./diagnostic.component.css']
 })
 export class DiagnosticComponent implements OnInit {
 
@@ -12,6 +13,24 @@ export class DiagnosticComponent implements OnInit {
   patientList=[];
   localPatient:any;
   required=false;
+  isExpanded: boolean;
+  isExpandedA: boolean;
+  isExpandedB: boolean;
+  isExpandedC: boolean;
+
+  toggle() {
+    this.isExpanded = !this.isExpanded;
+  }
+
+  toggleA() {
+    this.isExpandedA = !this.isExpandedA;
+  }
+  toggleB() {
+    this.isExpandedB = !this.isExpandedB;
+  }
+  toggleC() {
+    this.isExpandedC = !this.isExpandedC;
+  }
 
 
   disease;
