@@ -1,0 +1,50 @@
+export class Symptom{
+    ProlongedFever:boolean
+    BoneAche:boolean
+    SwellingOfTheLymphNodes:boolean
+    PetechiaeAndDyspnea:boolean
+    Headache:boolean
+    FeelingTired:boolean
+    LossOfAppetite:boolean
+    NightSweats:boolean
+    FeelingFull:boolean
+    InfectionOfTheSkinLungsKidneysOrOtherOrgans:boolean
+    ShortOfBreath:boolean
+    Exhausted:boolean
+    Fatigue:boolean
+    ShortnessOfBreathDuringNormalPhysicalActivities:boolean
+    Dizziness:boolean
+    EnlargedSpleen:boolean
+    PainOrAFeelingOfFullnessUnderTheRibs:boolean
+    Weightloss :boolean
+    Fever:boolean
+    Drowsiness:boolean
+    BlurryVision:boolean
+    ShortnessOfBreathDuringBasicDailyActivities:boolean
+    Weakness: boolean
+    constructor(){
+        this.ProlongedFever,
+        this.BoneAche,
+        this.SwellingOfTheLymphNodes,
+        this.PetechiaeAndDyspnea,
+        this.Headache,
+        this.FeelingTired,
+        this.LossOfAppetite,
+        this.NightSweats,
+        this.FeelingFull,
+        this.InfectionOfTheSkinLungsKidneysOrOtherOrgans,
+        this.ShortOfBreath,
+        this.Exhausted,
+        this.Fatigue,
+        this.ShortnessOfBreathDuringNormalPhysicalActivities,
+        this.Dizziness,
+        this.EnlargedSpleen,
+        this.PainOrAFeelingOfFullnessUnderTheRibs,
+        this.Weightloss,
+        this.Fever,
+        this.Drowsiness,
+        this.BlurryVision,
+        this.ShortnessOfBreathDuringBasicDailyActivities,
+        this.Weakness
+    }
+}

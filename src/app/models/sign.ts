@@ -1,0 +1,46 @@
+export class Sign {
+    Pallor:boolean
+    EnlargedLiverOrSpleen:boolean
+    Infections:boolean
+    Bruises:boolean
+    LumpsInNeckOrUnderArmOrStomachOrGroinArea:boolean
+    Fatigue:boolean
+    ShortnessOfBreathDuringActivities :boolean
+    EnlargedLymphNodes:boolean
+    LowGradeFever:boolean
+    Weightloss:boolean
+    FrequentInfections:boolean
+    ProlongedBleedingFromMinorCuts:boolean
+    AppearanceOfRedDotOnTheSkin:boolean
+    FrequentNosebleeds:boolean
+    BleedingGums:boolean
+    BloodInTheUrine:boolean
+    UnexplainedWeightLoss:boolean
+    Bruising:boolean
+    GumOrNoseBleeds:boolean
+    DisseminatedNodules:boolean
+    SwollenGums :boolean
+    constructor(){
+        this.Pallor,
+        this.EnlargedLiverOrSpleen,
+        this.Infections,
+        this.Bruises,
+        this.LumpsInNeckOrUnderArmOrStomachOrGroinArea,
+        this.Fatigue,
+        this.ShortnessOfBreathDuringActivities,
+        this.EnlargedLymphNodes,
+        this.LowGradeFever,
+        this.Weightloss,
+        this.FrequentInfections,
+        this.ProlongedBleedingFromMinorCuts,
+        this.AppearanceOfRedDotOnTheSkin
+        this.FrequentNosebleeds,
+        this.BleedingGums,
+        this.BloodInTheUrine,
+        this.UnexplainedWeightLoss,
+         this.Bruising,
+         this.GumOrNoseBleeds,
+         this.DisseminatedNodules,
+         this.SwollenGums
+    }
+}

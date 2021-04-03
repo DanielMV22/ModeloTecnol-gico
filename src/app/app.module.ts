@@ -7,6 +7,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
+
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -36,12 +37,12 @@ import {
   AppSidebarModule,
 } from '@coreui/angular';
 
-// Import routing module
+//! Import routing module
 import { AppRoutingModule } from './app.routing';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';  //!
+import { FormsModule } from '@angular/forms'; //!
 
-// Import 3rd party components
+//! Import 3rd party components
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
@@ -65,8 +66,7 @@ import { DataTablesModule } from 'angular-datatables';
     IconSetModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    DataTablesModule,
-    HttpClientModule
+    DataTablesModule
   ],
   declarations: [
     AppComponent,

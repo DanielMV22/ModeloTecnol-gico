@@ -59,31 +59,31 @@
                             <label class="col-md-3 col-form-label">General</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.AdvancedPaternalAge" name="AdvancedPaternalAge" id="checkbox1">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.general.AdvancedPaternalAge" name="AdvancedPaternalAge" id="checkbox1">
                                     <label class="form-check-label" for="checkbox1">
                                       Edad Paterna Avanzada
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.MaternalFetalLoss" name="MaternalFetalLoss" id="checkbox2">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.general.MaternalFetalLoss" name="MaternalFetalLoss" id="checkbox2">
                                     <label class="form-check-label" for="checkbox2">
                                       Pérdida Fetal Materna
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.XRayExposureAtBirth" name="XRayExposureAtBirth" id="checkbox3">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.general.XRayExposureAtBirth" name="XRayExposureAtBirth" id="checkbox3">
                                     <label class="form-check-label" for="checkbox3">
                                       Exposición a Rayos X en el Nacimiento
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.PreviousChemotherapyOrRadiotherapy" name="PreviousChemotherapyOrRadiotherapy" id="checkbox4">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.general.PreviousChemotherapyOrRadiotherapy" name="PreviousChemotherapyOrRadiotherapy" id="checkbox4">
                                     <label class="form-check-label" for="checkbox4">
                                       Quimioterapia o Radioterapia Previa
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.InheritedConditions" name="InheritedConditions" id="checkbox5">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.general.InheritedConditions" name="InheritedConditions" id="checkbox5">
                                     <label class="form-check-label" for="checkbox5">
                                       Afecciones Heredadas
                                   </label>
@@ -112,31 +112,31 @@
                             <label class="col-md-3 col-form-label">Signos</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Pallor" name="Pallor" id="checkbox6">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.sign.Pallor" name="Pallor" id="checkbox6">
                                     <label class="form-check-label" for="checkbox6">
                                       Palidez
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.EnlargedLiverOrSpleen" name="EnlargedLiverOrSpleen" id="checkbox7">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.sign.EnlargedLiverOrSpleen" name="EnlargedLiverOrSpleen" id="checkbox7">
                                     <label class="form-check-label" for="checkbox7">
                                       Hígado o Bazo Agrandado
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Infections" name="Infections" id="checkbox8">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.sign.Infections" name="Infections" id="checkbox8">
                                     <label class="form-check-label" for="checkbox8">
                                       Infecciones
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Bruises" name="Bruises" id="checkbox9">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.sign.Bruises" name="Bruises" id="checkbox9">
                                     <label class="form-check-label" for="checkbox9">
                                       Moretones
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.LumpsInNeckOrUnderArmOrStomachOrGroinArea" name="LumpsInNeckOrUnderArmOrStomachOrGroinArea" id="checkbox10">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.sign.LumpsInNeckOrUnderArmOrStomachOrGroinArea" name="LumpsInNeckOrUnderArmOrStomachOrGroinArea" id="checkbox10">
                                     <label class="form-check-label" for="checkbox10">
                                       Bultos en la Zona del Cuello, Debajo del Brazo, Estómago o Ingle
                                   </label>
@@ -164,43 +164,43 @@
                             <label class="col-md-3 col-form-label">Síntomas</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.ProlongedFever" name="ProlongedFever" id="checkbox11">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.symptom.ProlongedFever" name="ProlongedFever" id="checkbox11">
                                     <label class="form-check-label" for="checkbox11">
                                       Fiebre Prolongada
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.BoneAche" name="BoneAche" id="checkbox12">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.symptom.BoneAche" name="BoneAche" id="checkbox12">
                                     <label class="form-check-label" for="checkbox12">
                                       Dolor de Huesos
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.SwellingOfTheLymphNodes" name="SwellingOfTheLymphNodes" id="checkbox13">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.symptom.SwellingOfTheLymphNodes" name="SwellingOfTheLymphNodes" id="checkbox13">
                                     <label class="form-check-label" for="checkbox13">
                                       Inflamación de los Ganglios Linfáticos
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.PetechiaeAndDyspnea" name="PetechiaeAndDyspnea" id="checkbox14">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.symptom.PetechiaeAndDyspnea" name="PetechiaeAndDyspnea" id="checkbox14">
                                     <label class="form-check-label" for="checkbox14">
                                       Petequias y Disnea
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Headache" name="Headache" id="checkbox15">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.symptom.Headache" name="Headache" id="checkbox15">
                                     <label class="form-check-label" for="checkbox15">
                                       Dolor de Cabeza
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.FeelingTired" name="FeelingTired" id="checkbox16">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.symptom.FeelingTired" name="FeelingTired" id="checkbox16">
                                     <label class="form-check-label" for="checkbox16">
                                       Sensación de Cansancio
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.LossOfAppetite" name="LossOfAppetite" id="checkbox17">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.symptom.LossOfAppetite" name="LossOfAppetite" id="checkbox17">
                                     <label class="form-check-label" for="checkbox17">
                                       Pérdida de Apetito
                                   </label>
@@ -228,19 +228,19 @@
                             <label class="col-md-3 col-form-label">Resultado de Laboratorio</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.LeukemicBlasts" name="LeukemicBlasts" id="checkbox18">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.labResult.LeukemicBlasts" name="LeukemicBlasts" id="checkbox18">
                                     <label class="form-check-label" for="checkbox18">
                                       Blastos Leucémicos > 25%
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.WhiteBloodCellCount" name="WhiteBloodCellCount" id="checkbox19">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.labResult.WhiteBloodCellCount" name="WhiteBloodCellCount" id="checkbox19">
                                     <label class="form-check-label" for="checkbox19">
                                       Recuento de Leucocitos > 50000mm³
                                   </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.PositiveCytogeneticAnalysis" name="PositiveCytogeneticAnalysis" id="checkbox20">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.labResult.PositiveCytogeneticAnalysis" name="PositiveCytogeneticAnalysis" id="checkbox20">
                                     <label class="form-check-label" for="checkbox20">
                                       Análisis Citogenético Positivo
                                   </label>
@@ -258,6 +258,7 @@
             <div class="card">
                 <div class="card-body">
                     <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards()">
+                       <!-- <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards(sigla)"> -->
                       <i class="fa fa-dot-circle-o"></i>
                       Enviar</button>
                     <button type="reset" class="btn btn-danger" style="width:40%;" (click)="onBack()">
@@ -287,7 +288,7 @@
                             <label class="col-md-3 col-form-label">General</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.PreviousDiseases" name="PreviousDiseases" id="checkbox21">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.general.PreviousDiseases" name="PreviousDiseases" id="checkbox21">
                                     <label class="form-check-label" for="checkbox21">
                                   Enfermedades previas </label>
                                 </div>
@@ -315,31 +316,31 @@
                             <label class="col-md-3 col-form-label">Signos</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Fatigue" name="Fatigue" id="checkbox22">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.sign.Fatigue" name="Fatigue" id="checkbox22">
                                     <label class="form-check-label" for="checkbox22">
                                   Fatiga
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.ShortnessOfBreathDuringActivities" name="ShortnessOfBreathDuringActivities" id="checkbox23">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.sign.ShortnessOfBreathDuringActivities" name="ShortnessOfBreathDuringActivities" id="checkbox23">
                                     <label class="form-check-label" for="checkbox23">
                                   Falta de aliento durante las actividades
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.EnlargedLymphNodes" name="EnlargedLymphNodes" id="checkbox24">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.sign.EnlargedLymphNodes" name="EnlargedLymphNodes" id="checkbox24">
                                     <label class="form-check-label" for="checkbox24">
                                   Agrandamiento de los ganglios linfáticos
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.LowGradeFever" name="LowGradeFever" id="checkbox25">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.sign.LowGradeFever" name="LowGradeFever" id="checkbox25">
                                     <label class="form-check-label" for="checkbox25">
                                   Fiebre de bajo grado
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Weightloss" name="Weightloss" id="checkbox26">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.sign.Weightloss" name="Weightloss" id="checkbox26">
                                     <label class="form-check-label" for="checkbox26">
                                   Pérdida de peso
                             </label>
@@ -367,31 +368,31 @@
                             <label class="col-md-3 col-form-label">Síntomas</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.NightSweats" name="NightSweats" id="checkbox27">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.symptom.NightSweats" name="NightSweats" id="checkbox27">
                                     <label class="form-check-label" for="checkbox27">
                                   Sudores nocturnos
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.FeelingFull" name="FeelingFull" id="checkbox28">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.symptom.FeelingFull" name="FeelingFull" id="checkbox28">
                                     <label class="form-check-label" for="checkbox28">
                                   Sensación de saciedad
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans" name="InfectionOfTheSkinLungsKidneysOrOtherOrgans" id="checkbox29">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans" name="InfectionOfTheSkinLungsKidneysOrOtherOrgans" id="checkbox29">
                                     <label class="form-check-label" for="checkbox29">
                                   Infección de la piel, pulmones, riñones u otros órganos
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.ShortOfBreath" name="ShortOfBreath" id="checkbox30">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.symptom.ShortOfBreath" name="ShortOfBreath" id="checkbox30">
                                     <label class="form-check-label" for="checkbox30">
                                   Falta de aliento
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Exhausted" name="Exhausted" id="checkbox31">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.symptom.Exhausted" name="Exhausted" id="checkbox31">
                                     <label class="form-check-label" for="checkbox31">
                                   Cansancio extremo
                             </label>
@@ -419,31 +420,31 @@
                             <label class="col-md-3 col-form-label">Resultado de Laboratorio</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.InsufficientNumberOfPlatelets" name="InsufficientNumberOfPlatelets" id="checkbox32">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.labResult.InsufficientNumberOfPlatelets" name="InsufficientNumberOfPlatelets" id="checkbox32">
                                     <label class="form-check-label" for="checkbox32">
                                   Cantidad insuficiente de plaquetas < 10,000/Ul
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.CD38" name="CD38" id="checkbox33">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.labResult.CD38" name="CD38" id="checkbox33">
                                     <label class="form-check-label" for="checkbox33">
                                   CD38
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.Beta2Microglobulin" name="Beta2Microglobulin" id="checkbox34">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.labResult.Beta2Microglobulin" name="Beta2Microglobulin" id="checkbox34">
                                     <label class="form-check-label" for="checkbox34">
                                   Microglobulina beta-2
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.AbnormalIncreaseLymphocytesBlood" name="AbnormalIncreaseLymphocytesBlood" id="checkbox35">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.labResult.AbnormalIncreaseLymphocytesBlood" name="AbnormalIncreaseLymphocytesBlood" id="checkbox35">
                                     <label class="form-check-label" for="checkbox35">
                                 Aumento anormal de cantidad de linfocitos en la sangre
                           </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.Anemia" name="Anemia" id="checkbox36">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cll.labResult.Anemia" name="Anemia" id="checkbox36">
                                     <label class="form-check-label" for="checkbox36">
                               Anemia
                         </label>
@@ -491,19 +492,19 @@
                             <label class="col-md-3 col-form-label">General</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.DNADamage" name="DNADamage" id="checkbox37">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.general.DNADamage" name="DNADamage" id="checkbox37">
                                     <label class="form-check-label" for="checkbox37">
                                   Lesión en el ADN
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.PreviousDiseases" name="PreviousDiseases" id="checkbox38">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.general.PreviousDiseases" name="PreviousDiseases" id="checkbox38">
                                     <label class="form-check-label" for="checkbox38">
                                   Enfermedades previas
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.PreviousInjuries" name="PreviousInjuries" id="checkbox39">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.general.PreviousInjuries" name="PreviousInjuries" id="checkbox39">
                                     <label class="form-check-label" for="checkbox39">
                                   Lesiones previas
                             </label>
@@ -532,49 +533,49 @@
                             <label class="col-md-3 col-form-label">Signos</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Pallor" name="Pallor" id="checkbox40">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.Pallor" name="Pallor" id="checkbox40">
                                     <label class="form-check-label" for="checkbox40">
                                   Palidez
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.FrequentInfections" name="FrequentInfections" id="checkbox41">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.FrequentInfections" name="FrequentInfections" id="checkbox41">
                                     <label class="form-check-label" for="checkbox41">
                                   Infecciones frecuentes
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Bruises" name="Bruises" id="checkbox42">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.Bruises" name="Bruises" id="checkbox42">
                                     <label class="form-check-label" for="checkbox42">
                                   Moretones
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.ProlongedBleedingFromMinorCuts" name="ProlongedBleedingFromMinorCuts" id="checkbox43">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.ProlongedBleedingFromMinorCuts" name="ProlongedBleedingFromMinorCuts" id="checkbox43">
                                     <label class="form-check-label" for="checkbox43">
                                   Sangrado prolongado por cortaduras leves
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.AppearanceOfRedDotOnTheSkin" name="AppearanceOfRedDotOnTheSkin" id="checkbox44">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.AppearanceOfRedDotOnTheSkin" name="AppearanceOfRedDotOnTheSkin" id="checkbox44">
                                     <label class="form-check-label" for="checkbox44">
                                   Aparición de punto rojo en la piel (Petequias)
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.FrequentNosebleeds" name="FrequentNosebleeds" id="checkbox45">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.FrequentNosebleeds" name="FrequentNosebleeds" id="checkbox45">
                                     <label class="form-check-label" for="checkbox45">
                                 Sangrados nasales frecuentes
                           </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.BleedingGums" name="BleedingGums" id="checkbox46">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.BleedingGums" name="BleedingGums" id="checkbox46">
                                     <label class="form-check-label" for="checkbox46">
                               Encías sangrantes
                         </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.BloodInTheUrine" name="BloodInTheUrine" id="checkbox47">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.BloodInTheUrine" name="BloodInTheUrine" id="checkbox47">
                                     <label class="form-check-label" for="checkbox47">
                             Sangre en la orina
                       </label>
@@ -602,43 +603,43 @@
                             <label class="col-md-3 col-form-label">Síntomas</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Fatigue" name="Fatigue" id="checkbox48">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.Fatigue" name="Fatigue" id="checkbox48">
                                     <label class="form-check-label" for="checkbox48">
                                   Fatiga
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.ShortnessOfBreathDuringNormalPhysicalActivities" name="ShortnessOfBreathDuringNormalPhysicalActivities" id="checkbox49">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.ShortnessOfBreathDuringNormalPhysicalActivities" name="ShortnessOfBreathDuringNormalPhysicalActivities" id="checkbox49">
                                     <label class="form-check-label" for="checkbox49">
                                   Falta de aliento durante las actividades físicas normales
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Dizziness" name="Dizziness" id="checkbox50">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.Dizziness" name="Dizziness" id="checkbox50">
                                     <label class="form-check-label" for="checkbox50">
                                   Mareos
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.NightSweats" name="NightSweats" id="checkbox51">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.NightSweats" name="NightSweats" id="checkbox51">
                                     <label class="form-check-label" for="checkbox51">
                                   Sudores nocturnos
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.EnlargedSpleen" name="EnlargedSpleen" id="checkbox52">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.EnlargedSpleen" name="EnlargedSpleen" id="checkbox52">
                                     <label class="form-check-label" for="checkbox52">
                                   Agrandamiento del bazo
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.PainOrAFeelingOfFullnessUnderTheRibs" name="PainOrAFeelingOfFullnessUnderTheRibs" id="checkbox53">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.PainOrAFeelingOfFullnessUnderTheRibs" name="PainOrAFeelingOfFullnessUnderTheRibs" id="checkbox53">
                                     <label class="form-check-label" for="checkbox53">
                                   Dolor o sensación de saciedad debajo de las costillas
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Weightloss" name="Weightloss" id="checkbox54">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.Weightloss" name="Weightloss" id="checkbox54">
                                     <label class="form-check-label" for="checkbox54">
                                   Pérdida de peso
                             </label>
@@ -666,43 +667,43 @@
                             <label class="col-md-3 col-form-label">Resultado de Laboratorio</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.InsufficientAmountOfRedBloodCells" name="InsufficientAmountOfRedBloodCells" id="checkbox55">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.labResult.InsufficientAmountOfRedBloodCells" name="InsufficientAmountOfRedBloodCells" id="checkbox55">
                                     <label class="form-check-label" for="checkbox55">
                                   Cantidad insuficiente de glóbulos rojos
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.InsufficientNumberOfPlatelets" name="InsufficientNumberOfPlatelets" id="checkbox56">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.labResult.InsufficientNumberOfPlatelets" name="InsufficientNumberOfPlatelets" id="checkbox56">
                                     <label class="form-check-label" for="checkbox56">
                                   Cantidad insuficiente de plaquetas
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.InsufficientAmountOfNeutrophils" name="InsufficientAmountOfNeutrophils" id="checkbox57">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.labResult.InsufficientAmountOfNeutrophils" name="InsufficientAmountOfNeutrophils" id="checkbox57">
                                     <label class="form-check-label" for="checkbox57">
                                   Cantidad insuficiente de neutrófilos
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.Hyperdiploidy" name="Hyperdiploidy" id="checkbox58">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.labResult.Hyperdiploidy" name="Hyperdiploidy" id="checkbox58">
                                     <label class="form-check-label" for="checkbox58">
                                   Hiperdiploidía > 46 cromosomas
                           </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.FusionGeneBCRABL1" name="FusionGeneBCRABL1" id="checkbox59">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.labResult.FusionGeneBCRABL1" name="FusionGeneBCRABL1" id="checkbox59">
                                     <label class="form-check-label" for="checkbox59">
                                   Gen de fusión BCRABL1
                         </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.Ikaros" name="Ikaros" id="checkbox60">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.labResult.Ikaros" name="Ikaros" id="checkbox60">
                                     <label class="form-check-label" for="checkbox60">
                                   Ikaros
                       </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.ETP" name="ETP" id="checkbox61">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.labResult.ETP" name="ETP" id="checkbox61">
                                     <label class="form-check-label" for="checkbox61">
                                   ETP
                     </label>
@@ -748,13 +749,13 @@
                             <label class="col-md-3 col-form-label">General</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.DNADamage" name="DNADamage" id="checkbox62">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.general.DNADamage" name="DNADamage" id="checkbox62">
                                     <label class="form-check-label" for="checkbox62">
                                   Lesión en el ADN
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="general.RadiationExposure" name="RadiationExposure" id="checkbox63">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.general.RadiationExposure" name="RadiationExposure" id="checkbox63">
                                     <label class="form-check-label" for="checkbox63">
                                   Exposición a la radiación
                             </label>
@@ -783,43 +784,43 @@
                             <label class="col-md-3 col-form-label">Signos</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.UnexplainedWeightLoss" name="UnexplainedWeightLoss" id="checkbox64">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.UnexplainedWeightLoss" name="UnexplainedWeightLoss" id="checkbox64">
                                     <label class="form-check-label" for="checkbox64">
                                   Pérdida de peso sin explicación
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Pallor" name="Pallor" id="checkbox65">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.Pallor" name="Pallor" id="checkbox65">
                                     <label class="form-check-label" for="checkbox65">
                                   Palidez
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Bruising" name="Bruising" id="checkbox66">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.Bruising" name="Bruising" id="checkbox66">
                                     <label class="form-check-label" for="checkbox66">
                                   Hematomas
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.GumOrNoseBleeds" name="GumOrNoseBleeds" id="checkbox67">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.GumOrNoseBleeds" name="GumOrNoseBleeds" id="checkbox67">
                                     <label class="form-check-label" for="checkbox67">
                                   Hemorragias en encías o nasal
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.Infections" name="Infections" id="checkbox68">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.Infections" name="Infections" id="checkbox68">
                                     <label class="form-check-label" for="checkbox68">
                                 Infecciones
                           </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.DisseminatedNodules" name="DisseminatedNodules" id="checkbox69">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.DisseminatedNodules" name="DisseminatedNodules" id="checkbox69">
                                     <label class="form-check-label" for="checkbox69">
                                 Nódulos diseminados
                           </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="sign.SwollenGums" name="SwollenGums" id="checkbox70">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.SwollenGums" name="SwollenGums" id="checkbox70">
                                     <label class="form-check-label" for="checkbox70">
                               Inflamación de las encías
                         </label>
@@ -847,61 +848,61 @@
                             <label class="col-md-3 col-form-label">Síntomas</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.FeelingTired" name="FeelingTired" id="checkbox71">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.FeelingTired" name="FeelingTired" id="checkbox71">
                                     <label class="form-check-label" for="checkbox71">
                                   Sensación de cansancio
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Dizziness" name="Dizziness" id="checkbox72">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.Dizziness" name="Dizziness" id="checkbox72">
                                     <label class="form-check-label" for="checkbox72">
                                   Mareos
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Fever" name="Fever" id="checkbox73">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.Fever" name="Fever" id="checkbox73">
                                     <label class="form-check-label" for="checkbox73">
                                   Fiebre
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Headache" name="Headache" id="checkbox74">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.Headache" name="Headache" id="checkbox74">
                                     <label class="form-check-label" for="checkbox74">
                                   Dolor de cabeza
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Drowsiness" name="Drowsiness" id="checkbox75">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.Drowsiness" name="Drowsiness" id="checkbox75">
                                     <label class="form-check-label" for="checkbox75">
                                   Somnolencia
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.BlurryVision" name="BlurryVision" id="checkbox76">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.BlurryVision" name="BlurryVision" id="checkbox76">
                                     <label class="form-check-label" for="checkbox76">
                                   Visión borrosa
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.PainOrAFeelingOfFullnessUnderTheRibs" name="PainOrAFeelingOfFullnessUnderTheRibs" id="checkbox77">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.PainOrAFeelingOfFullnessUnderTheRibs" name="PainOrAFeelingOfFullnessUnderTheRibs" id="checkbox77">
                                     <label class="form-check-label" for="checkbox77">
                                   Dolor o sensación de saciedad debajo de las costillas
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.ShortnessOfBreathDuringBasicDailyActivities" name="ShortnessOfBreathDuringBasicDailyActivities" id="checkbox78">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.ShortnessOfBreathDuringBasicDailyActivities" name="ShortnessOfBreathDuringBasicDailyActivities" id="checkbox78">
                                     <label class="form-check-label" for="checkbox78">
                                   Falta de aliento durante las actividades cotidianas básicas
                           </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Weakness" name="Weakness" id="checkbox79">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.Weakness" name="Weakness" id="checkbox79">
                                     <label class="form-check-label" for="checkbox79">
                                   Debilidad
                         </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="symptom.Fatigue" name="Fatigue" id="checkbox80">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.Fatigue" name="Fatigue" id="checkbox80">
                                     <label class="form-check-label" for="checkbox80">
                                   Fatiga
                       </label>
@@ -929,31 +930,31 @@
                             <label class="col-md-3 col-form-label">Resultado de Laboratorio</label>
                             <div class="col-md-9 col-form-label">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.HigherWhiteBloodCellCounts" name="HigherWhiteBloodCellCounts" id="checkbox81">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.labResult.HigherWhiteBloodCellCounts" name="HigherWhiteBloodCellCounts" id="checkbox81">
                                     <label class="form-check-label" for="checkbox81">
                                   Recuentos de leucocitos más elevados (200X109/L)
                             </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.PhiladelphiaChromosome" name="PhiladelphiaChromosome" id="checkbox82">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.labResult.PhiladelphiaChromosome" name="PhiladelphiaChromosome" id="checkbox82">
                                     <label class="form-check-label" for="checkbox82">
                                   Cromosoma Filadelfia (Ph)
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.FusionGeneBCRABL1" name="FusionGeneBCRABL1" id="checkbox83">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.labResult.FusionGeneBCRABL1" name="FusionGeneBCRABL1" id="checkbox83">
                                     <label class="form-check-label" for="checkbox83">
                                   Gen de fusión BCRABL1
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.InsufficientAmountOfRedBloodCells" name="InsufficientAmountOfRedBloodCells" id="checkbox84">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.labResult.InsufficientAmountOfRedBloodCells" name="InsufficientAmountOfRedBloodCells" id="checkbox84">
                                     <label class="form-check-label" for="checkbox84">
                                 Cantidad insuficiente de glóbulos rojos
                           </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="labResult.ElevatedNumberOfWhiteBloodCells" name="ElevatedNumberOfWhiteBloodCells" id="checkbox85">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.labResult.ElevatedNumberOfWhiteBloodCells" name="ElevatedNumberOfWhiteBloodCells" id="checkbox85">
                                     <label class="form-check-label" for="checkbox85">
                               Cantidad elevada de glóbulos blancos
                         </label>
