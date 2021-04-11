@@ -257,7 +257,7 @@
         <div class="col-md-6" align="center">
             <div class="card">
                 <div class="card-body">
-                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards()">
+                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsAll()">
                        <!-- <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards(sigla)"> -->
                       <i class="fa fa-dot-circle-o"></i>
                       Enviar</button>
@@ -457,11 +457,11 @@
         </div>
 
 
-        <!--/.col-->
+        <!--//! col -->
         <div class="col-md-6" align="center">
             <div class="card">
                 <div class="card-body">
-                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards()">
+                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsCll()">
                     <i class="fa fa-dot-circle-o"></i>
                     Enviar</button>
                     <button type="reset" class="btn btn-danger" style="width:40%;" (click)="onBack()">
@@ -720,7 +720,7 @@
         <div class="col-md-6" align="center">
             <div class="card">
                 <div class="card-body">
-                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards()">
+                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsAml()">
                     <i class="fa fa-dot-circle-o"></i>
                     Enviar</button>
                     <button type="reset" class="btn btn-danger" style="width:40%;" (click)="onBack()">
@@ -731,7 +731,7 @@
         <!--/.col-->
     </div>
 
-    <!--03-->
+    <!-- //**03-->
     <div class="row" *ngIf="!isPatient && disease==3">
         <div class="col-md-6">
             <div class="card">
@@ -971,7 +971,7 @@
         <div class="col-md-6" align="center">
             <div class="card">
                 <div class="card-body">
-                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards()">
+                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsCml()">
                     <i class="fa fa-dot-circle-o"></i>
                     Enviar</button>
                     <button type="reset" class="btn btn-danger" style="width:40%;" (click)="onBack()">
@@ -981,6 +981,66 @@
         </div>
         <!--/.col-->
     </div>
+  <!--/.col-->
+
+  
+    <div class="row" *ngIf="!isPatient && disease==4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" [class.expanded]="isExpanded" (click)="toggle()">
+                    Persona
+                    <span class="iconpos" [ngClass]="{
+                'fas fa-caret-square-down': isExpanded,
+                 'fas fa-caret-square-down': !isExpanded
+              }"></span>
+                </div>
+
+                <div *ngIf="isExpanded" class="card-body">
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Persona</label>
+                            <div class="col-md-9 col-form-label">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="persona.Id" name="Id" id="checkbox37">
+                                    <label class="form-check-label" for="checkbox37">
+                                  Id
+                            </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="persona.Nombre" name="Nombre" id="checkbox38">
+                                    <label class="form-check-label" for="checkbox38">
+                                Nombre
+                            </label>
+                                </div>
+                                <div class="form-check checkbox">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="persona.Edad" name="Edad" id="checkbox39">
+                                    <label class="form-check-label" for="checkbox39">
+                                  Edad
+                            </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-6" align="center">
+            <div class="card">
+                <div class="card-body">
+                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsPersona()">
+                    <i class="fa fa-dot-circle-o"></i>
+                    Enviar</button>
+                    <button type="reset" class="btn btn-danger" style="width:40%;" (click)="onBack()">
+                    <i class="fa fa-ban"></i>Regresar</button>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+    </div>
+  
+
 
 
 </div>

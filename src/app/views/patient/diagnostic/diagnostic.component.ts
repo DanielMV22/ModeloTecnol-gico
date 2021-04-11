@@ -1,26 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-//***import { General, Sign, Symptom, LabResult, Sigla } from '../../../models/todo';
-
-import { Aml } from '../../../models/aml';
+import { All} from '../../../models/all';
 import { Cll } from '../../../models/cll';
-import { Cml } from '../../../models/cml';
-import { All } from '../../../models/all';
-
-
-
+import { Aml } from '../../../models/aml';
+import { Cml} from '../../../models/cml';
 import { MedicalService } from '../../../services/medical.service';
-import { LabResult } from '../../../models/labResult';
-import { Symptom } from '../../../models/symptom';
-import { Sign } from '../../../models/sign';
-import { General } from '../../../models/general';
-//!import { HttpClientModule, HttpClient } from '@angular/common/http'; 
-
+import { Persona } from '../../../models/Persona';
 
 @Component({
   templateUrl: './diagnostic.component.html',
   styleUrls: ['./diagnostic.component.css']
 })
-export class DiagnosticComponent implements OnInit {
+export class DiagnosticComponent implements OnInit{
 
   isPatient = true;
   patient;
@@ -31,21 +21,11 @@ export class DiagnosticComponent implements OnInit {
   isExpandedA: boolean;
   isExpandedB: boolean;
   isExpandedC: boolean;
- 
 
-  toggle() {
-    this.isExpanded = !this.isExpanded;
-  }
-  toggleA() {
-    this.isExpandedA = !this.isExpandedA;
-  }
-  toggleB() {
-    this.isExpandedB = !this.isExpandedB;
-  }
-  toggleC() {
-    this.isExpandedC = !this.isExpandedC;
-  }
-
+  toggle()  { this.isExpanded = !this.isExpanded;   }
+  toggleA() { this.isExpandedA = !this.isExpandedA; }
+  toggleB() { this.isExpandedB = !this.isExpandedB; }
+  toggleC() { this.isExpandedC = !this.isExpandedC; }
 
   disease;
   diseaseList=[
@@ -53,31 +33,18 @@ export class DiagnosticComponent implements OnInit {
     {id:1,name:'Leucemia Linfocítica Crónica  - (CLL)'},
     {id:2,name:'Leucemia Mieloide Aguda  - (AML)'},
     {id:3,name:'Leucemia Mieloide Crónica - (CML)'}
-
   ];
-
-  /*CARDS*/
-  general : General = new General;
-  sign : Sign = new Sign;
-  symptom : Symptom = new Symptom;
-  labResult : LabResult = new LabResult;
-  //**sigla:Sigla=new Sigla(this.general,this.sign,this.symptom,this.labResult);
-
-
   
   all: All= new All();
   cll: Cll= new Cll();
   aml: Aml= new Aml();
   cml: Cml= new Cml();
-  
-
+  persona: Persona= new Persona();
 
   constructor(private medicalService: MedicalService) {
     this.localPatient = medicalService.readLocal("patient");
 
   }
-
-
 
   ngOnInit() {
     if (this.localPatient != null) {
@@ -107,27 +74,46 @@ export class DiagnosticComponent implements OnInit {
 
   onBack(){
     this.isPatient=true;
-    //this.sigla=new Sigla(this.general,this.sign,this.symptom,this.labResult);
-    //this.general=new General;
-    //this.sign=new Sign;
-    //this.symptom=new Symptom;
-    //this.labResult=new LabResult;
     this.all=new All();
     this.cll=new Cll();
     this.aml=new Aml();
     this.cml=new Cml();
+    this.persona=new Persona();
   }
 
-  onSendCards(){
-    //console.log( this.sigla);
-    console.log(this.all);
-    console.log(this.cll);
-    console.log(this.aml);
-    console.log(this.cml);
+  onSendCardsAll(){
+      this.medicalService.addAll(this.all).subscribe((response: All)=> console.log(response));
+    //console.log(this.all);
   }
-
-
   
+  onSendCardsCll(){
+    this.medicalService.addCll(this.cll).subscribe((response: Cll )=> console.log(response));
+   // console.log(this.cll);
+  }
+  onSendCardsAml(){
+    this.medicalService.addAml(this.aml).subscribe((response: Aml)=> console.log(response));
+    //console.log(this.aml);
+  }
+  onSendCardsCml(){
+    this.medicalService.addCml(this.cml).subscribe((response: Cml)=> console.log(response));
+   // console.log(this.cml);
+  }
+
+/* //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  onSendCardsPersona(){
+    //console.log(this.persona);
+    this.medicalService.addPersona(this.persona).subscribe((response: Persona)=> console.log(response));
+  }
+*/
+
+
+}
+
+
+
+
+
+
   /*
   constructor(private http: HttpClient){}
 
@@ -139,8 +125,3 @@ export class DiagnosticComponent implements OnInit {
    })
   }
   */
-  
-
-
-
-}
