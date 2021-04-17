@@ -17,13 +17,15 @@ export class MedicalService {
   urlTicket = 'assets/json/ticket.json';
 
   //urlPersona='https://localhost:44386/api/Personas';
-  urlDeseaseAll='http://mtappdtcpapimanagement.azure-api.net/Diagnostico/ALL';
-  urlDeseaseCml='http://mtappdtcpapimanagement.azure-api.net/Diagnostico/CML';
-  urlDeseaseAml='http://mtappdtcpapimanagement.azure-api.net/Diagnostico/AML';
-  urlDeseaseCll='http://mtappdtcpapimanagement.azure-api.net/Diagnostico/CLL';
+  urlDeseaseAll='https://mtappdtcpapimanagement.azure-api.net/Diagnostico/ALL';
+  urlDeseaseCml='https://mtappdtcpapimanagement.azure-api.net/Diagnostico/CML';
+  urlDeseaseAml='https://mtappdtcpapimanagement.azure-api.net/Diagnostico/AML';
+  urlDeseaseCll='https://mtappdtcpapimanagement.azure-api.net/Diagnostico/CLL';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    console.log('servicio inicializado')
+   }
 
   getPatients() {
     return this.http.get(this.urlPatient);

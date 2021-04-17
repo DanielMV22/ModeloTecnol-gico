@@ -1,0 +1,99 @@
+
+    <div class="general" >
+        <div class="rec-1">
+            <div class="imagen">
+                <img src="assets/img/diagnostico.png">
+            </div>
+            <div class="titulo-diagnostico">
+                <h1 class="titulo-pediatrico">
+                   Diagnóstico del Cancer Pediátrico 
+                </h1>
+            </div>
+            
+        </div>
+        <div class="rec-2">
+            <div class="titulo-cancer">
+                <h2>
+                    CÁNCER : LEUCEMIA
+                </h2>
+            </div>
+            <br>
+            <div class="resultados">
+                <h2 class="tipo-leucemia">
+                    Leucemia mieloide crónica o CML
+                </h2>
+            </div>
+            <div class="sint-sig">
+                <div class="blanco">
+    
+                </div>
+                <div class="sintomas">
+                 
+                    <h2 class="titulo-sintomas">Síntomas</h2>
+                    <br>
+                    <br>
+                    <div *ngIf=" !isPatient && showCml==false" ></div>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.FeelingTired==true">Sensación de cansancio</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.Dizziness==true">Mareos</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.Fever==true">Fiebre Prolongada</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.Headache==true">Dolor de cabeza</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.Drowsiness==true">Somnolencia</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.BlurryVision==true">Visión borrosa</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.PainOrAFeelingOfFullnessUnderTheRibs==true">Dolor o sensación de saciedad debajo de las costillas, en el lado izquierdo debido al agrandamiento del bazo </h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.ShortnessOfBreathDuringBasicDailyActivities==true">Falta de aliento durante las actividades cotidianas básicas</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.Weakness==true">Debilidad</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.symptom.Fatigue==true">Fatiga</h4>
+                </div>
+                <div class="signos">
+                    <h2 class="titulo-signos">Signos</h2>
+                    <div *ngIf=" !isPatient && showCml==false" ></div>
+                    <br>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.UnexplainedWeightLoss==true">Pérdida de peso</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.Pallor==true">Palidez</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.Bruising==true">Hematomas</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.GumOrNoseBleeds==true">Hemorragias en encías o nasal</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.Infections==true">Infecciones</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.DisseminatedNodules==true">Nódulos diseminados</h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.SwollenGums==true">Inflamación de las encías </h4>
+                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showCml==false && cml.sign.ProlongedBleedingFromMinorCuts==true">Sangrado prolongado por cortaduras leves </h4>
+                </div>
+            </div>
+        </div>
+        <div class="rec-3">
+            <div class="tratamiento">
+                <div class="text-tratamiento">
+                    <button id="boton-tratamiento" type="submit">
+                      TRATAMIENTO
+                    </button>
+            </div>
+    
+            </div>
+            <div class="estadio">
+                <h2 class="estadio-nombre">Estadio: </h2>
+                <h2 class="estadio-positivo">Negativo</h2>
+                
+            </div>
+            <div class="blanco">
+    
+            </div>
+            <div class="pre">
+                <h5 class="pre-descripcion">Se tiene una probabilidad del 92.86% que el paciente no padece de la enfermedad de la leucemia mieloide crónica (CML)</h5>
+              </div>
+            <div class="descrip">
+                <div class="blanco"></div>
+                <div class="t-descripcion">
+                  <h2>Descripción</h2>  
+                </div>
+                <div class="p-descripcion">
+                    <p>
+                        En base a los parámetros ingresados, se tiene como resultado de que el paciente tiene una baja probabilidad de padecer leucemia, con una precisión del 92.86%. 
+                    <br> <br> <br>
+                    Se recomienda realizar nuevamente una evaluación al paciente para determinar el tipo de enfermedad que padece.
+                    </p>
+                </div>
+            </div>
+            <div class="blanco"></div>
+        </div>
+          
+    </div>
+    

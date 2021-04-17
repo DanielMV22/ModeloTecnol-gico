@@ -13,7 +13,7 @@ export class Sigla {
     }
 
 }
-//!ALL
+
 
 export class General {
     AdvancedPaternalAge:boolean
@@ -37,6 +37,7 @@ export class General {
         this.RadiationExposure=false
     }
 }
+
 
 export class Sign {
     Pallor:boolean

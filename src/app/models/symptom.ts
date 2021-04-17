@@ -22,6 +22,7 @@ export class Symptom{
     BlurryVision:boolean
     ShortnessOfBreathDuringBasicDailyActivities:boolean
     Weakness: boolean
+    
     constructor(){
         this.ProlongedFever,
         this.BoneAche,

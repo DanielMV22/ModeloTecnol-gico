@@ -8,6 +8,8 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 
+
+
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -24,6 +26,8 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { DiagnosticComponent } from './views/patient/diagnostic/diagnostic.component';
+
+
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -47,6 +51,16 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { DataTablesModule } from 'angular-datatables';
+
+import { DetalleDiagnosticoComponent } from './views/patient/detalles-diagnosticos/detalle-diagnostico/detalle-diagnostico.component';
+import { DetallediagnosticocllComponent } from './views/patient/detalles-diagnosticos/detallediagnosticocll/detallediagnosticocll.component';
+import { DetallediagnosticocmlComponent } from './views/patient/detalles-diagnosticos/detallediagnosticocml/detallediagnosticocml.component';
+import { DetallediagnosticoallComponent } from './views/patient/detalles-diagnosticos/detallediagnosticoall/detallediagnosticoall.component';
+
+import { DetallediagnosticoamlfalseComponent } from './views/patient/detalles-diagnosticos/detallediagnosticoamlfalse/detallediagnosticoamlfalse.component';
+import { DetallediagnosticocllfalseComponent } from './views/patient/detalles-diagnosticos/detallediagnosticocllfalse/detallediagnosticocllfalse.component';
+import { DetallediagnosticoallfalseComponent } from './views/patient/detalles-diagnosticos/detallediagnosticoallfalse/detallediagnosticoallfalse.component';
+import { DetallediagnosticocmlfalseComponent } from './views/patient/detalles-diagnosticos/detallediagnosticocmlfalse/detallediagnosticocmlfalse.component';
 
 @NgModule({
   imports: [
@@ -75,7 +89,18 @@ import { DataTablesModule } from 'angular-datatables';
     P500Component,
     DiagnosticComponent,
     LoginComponent,
+    DetalleDiagnosticoComponent,//AML
+    
+    DetallediagnosticoamlfalseComponent,
+    DetallediagnosticocllfalseComponent,
+    DetallediagnosticocmlfalseComponent,
+    DetallediagnosticoallfalseComponent,
+
+    DetallediagnosticocllComponent, //CLL
+    DetallediagnosticocmlComponent,//CML
+    DetallediagnosticoallComponent,//ALLL
     RegisterComponent
+   
   ],
   providers: [
     {

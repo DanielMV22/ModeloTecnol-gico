@@ -32,18 +32,18 @@
                     <button type="submit" class="btn btn-sm btn-primary" (click)="onCards()">
                       <i class="fa fa-dot-circle-o"></i>
                       Aceptar</button>
-                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Limpiar</button>
+                    <button type="reset" class="btn btn-sm btn-danger" (click)="limpiar()">
+                        <i class="fa fa-ban"></i>
+                         Limpiar</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!--  . . . .-->
-    <!--   <ng-template #ifBlock></ng-template>.-->
-    <!--   <ng-template #elseBlock></ng-template>-->
+   
     <div class="row" *ngIf="!isPatient && disease==0">
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpanded" (click)="toggle()">
                     General
@@ -58,6 +58,12 @@
                         <div class="form-group row">
                             <label class="col-md-3 col-form-label">General</label>
                             <div class="col-md-9 col-form-label">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="all.general.Age" name="Age" id="checkbox86">
+                                    <label class="form-check-label" for="checkbox86">
+                                      Edad: 2 - 5 años
+                                  </label>
+                                </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" [(ngModel)]="all.general.AdvancedPaternalAge" name="AdvancedPaternalAge" id="checkbox1">
                                     <label class="form-check-label" for="checkbox1">
@@ -96,7 +102,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedA" (click)="toggleA()">
                     Signos
@@ -148,7 +154,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedB" (click)="toggleB()">
                     Sintomas
@@ -212,7 +218,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedC" (click)="toggleC()">
                     Resultados de Laboratorio
@@ -251,14 +257,11 @@
                 </div>
             </div>
         </div>
-
-
         <!--/.col-->
-        <div class="col-md-6" align="center">
+        <div class="col-md-6" align="center" *ngIf="!isPatient && showAll==true">
             <div class="card">
                 <div class="card-body">
                     <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsAll()">
-                       <!-- <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCards(sigla)"> -->
                       <i class="fa fa-dot-circle-o"></i>
                       Enviar</button>
                     <button type="reset" class="btn btn-danger" style="width:40%;" (click)="onBack()">
@@ -266,13 +269,33 @@
                 </div>
             </div>
         </div>
-        <!--/.col-->
+
+<!--//!.col-->
+        <div class="all-true" *ngIf="(showA==true && all.general.Age && all.general.AdvancedPaternalAge && all.general.MaternalFetalLoss && all.general.XRayExposureAtBirth && all.general.PreviousChemotherapyOrRadiotherapy && all.general.InheritedConditions
+         && all.sign.Pallor && all.sign.EnlargedLiverOrSpleen
+          && all.symptom.ProlongedFever 
+          && all.labResult.LeukemicBlasts && all.labResult.WhiteBloodCellCount && all.labResult.PositiveCytogeneticAnalysis) ||
+          (showA==true && all.general.Age && all.general.AdvancedPaternalAge && all.general.PreviousChemotherapyOrRadiotherapy &&  
+          all.sign.Pallor && all.sign.EnlargedLiverOrSpleen &&
+          all.labResult.LeukemicBlasts && all.labResult.WhiteBloodCellCount && all.labResult.PositiveCytogeneticAnalysis) || 
+          (showA==true && all.general.MaternalFetalLoss && all.general.XRayExposureAtBirth && all.general.PreviousChemotherapyOrRadiotherapy &&
+          all.sign.EnlargedLiverOrSpleen &&  
+          all.symptom.ProlongedFever  && 
+          all.labResult.WhiteBloodCellCount  && all.labResult.PositiveCytogeneticAnalysis)">
+            <app-detallediagnosticoall [all]=all [isPatient]=isPatient [showAll]=showAll></app-detallediagnosticoall>
+        </div> 
+        <div class="all-false" *ngIf="showAll==false && showAfalse==true">
+    <app-detallediagnosticoallfalse [all]=all [isPatient]=isPatient [showAll]=showAll></app-detallediagnosticoallfalse>
+        </div>
+<!--//!.col-->
+
     </div>
+    
 
     <!--01-->
 
     <div class="row" *ngIf="!isPatient && disease==1">
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpanded" (click)="toggle()">
                     General
@@ -300,7 +323,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedA" (click)="toggleA()">
                     Signos
@@ -352,7 +375,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedB" (click)="toggleB()">
                     Sintomas
@@ -404,7 +427,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCll==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedC" (click)="toggleC()">
                     Resultados de Laboratorio
@@ -455,10 +478,8 @@
                 </div>
             </div>
         </div>
-
-
         <!--//! col -->
-        <div class="col-md-6" align="center">
+        <div class="col-md-6" align="center" *ngIf="!isPatient && showCll==true">
             <div class="card">
                 <div class="card-body">
                     <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsCll()">
@@ -469,6 +490,27 @@
                 </div>
             </div>
         </div>
+        <!--//!.col-->
+        <div class="cll-true" *ngIf="(showB==true && cll.general.PreviousDiseases && 
+        cll.sign.EnlargedLymphNodes  &&  cll.sign.LowGradeFever &&  cll.sign.Fatigue &&  cll.sign.Weightloss && 
+        cll.symptom.NightSweats && cll.symptom.FeelingFull && cll.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans && cll.symptom.ShortOfBreath && cll.symptom.Exhausted && 
+         cll.labResult.InsufficientNumberOfPlatelets && cll.labResult.CD38 && cll.labResult.Beta2Microglobulin && cll.labResult.AbnormalIncreaseLymphocytesBlood && cll.labResult.Anemia ) || 
+         (showB==true && cll.general.PreviousDiseases && 
+         cll.sign.Fatigue &&  cll.sign.Weightloss && 
+         cll.symptom.NightSweats && cll.symptom.Exhausted && 
+         cll.labResult.InsufficientNumberOfPlatelets && cll.labResult.CD38 && cll.labResult.Beta2Microglobulin && cll.labResult.AbnormalIncreaseLymphocytesBlood && cll.labResult.Anemia ) || 
+         (showB==true && cll.general.PreviousDiseases 
+         &&  cll.sign.Weightloss && 
+         cll.symptom.NightSweats && cll.symptom.FeelingFull &&  
+         cll.labResult.InsufficientNumberOfPlatelets && cll.labResult.Beta2Microglobulin && cll.labResult.AbnormalIncreaseLymphocytesBlood && cll.labResult.Anemia 
+        )">
+        <app-detallediagnosticocll [cll]=cll [isPatient]=isPatient [showCll]=showCll></app-detallediagnosticocll>
+        </div> 
+        <div class="cll-false" *ngIf="showCll==false && showBfalse==true">
+            <app-detallediagnosticocllfalse [cll]=cll [isPatient]=isPatient [showCll]=showCll></app-detallediagnosticocllfalse>
+        </div>
+        <!--//!.col-->
+
         <!--/.col-->
     </div>
 
@@ -476,7 +518,7 @@
     <!--02-->
 
     <div class="row" *ngIf="!isPatient && disease==2">
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpanded" (click)="toggle()">
                     General
@@ -517,7 +559,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedA" (click)="toggleA()">
                     Signos
@@ -542,6 +584,12 @@
                                     <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.FrequentInfections" name="FrequentInfections" id="checkbox41">
                                     <label class="form-check-label" for="checkbox41">
                                   Infecciones frecuentes
+                            </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.SwellingOfTheLymphNodes" name="SwellingOfTheLymphNodes" id="checkbox88">
+                                    <label class="form-check-label" for="checkbox88">
+                                        Agrandamiento de los ganglios linfáticos 
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
@@ -580,6 +628,12 @@
                             Sangre en la orina
                       </label>
                                 </div>
+                                <div class="form-check checkbox">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.sign.Weightloss" name="Weightloss" id="checkbox91">
+                                    <label class="form-check-label" for="checkbox91">
+                                        Pérdida de peso 
+                      </label>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -587,7 +641,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedB" (click)="toggleB()">
                     Sintomas
@@ -639,11 +693,12 @@
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.Weightloss" name="Weightloss" id="checkbox54">
-                                    <label class="form-check-label" for="checkbox54">
-                                  Pérdida de peso
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="aml.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans" name="InfectionOfTheSkinLungsKidneysOrOtherOrgans" id="checkbox90">
+                                    <label class="form-check-label" for="checkbox90">
+                                        Infecciones de la piel, pulmones, riñones u otros órganos 
                             </label>
                                 </div>
+                                
                             </div>
                         </div>
                     </form>
@@ -651,7 +706,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showAml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedC" (click)="toggleC()">
                     Resultados de Laboratorio
@@ -714,10 +769,8 @@
                 </div>
             </div>
         </div>
-
-
         <!--/.col-->
-        <div class="col-md-6" align="center">
+        <div class="col-md-6" align="center" *ngIf="!isPatient && showAml==true">
             <div class="card">
                 <div class="card-body">
                     <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsAml()">
@@ -729,11 +782,27 @@
             </div>
         </div>
         <!--/.col-->
+        <!--//!.col-->
+        <div class="aml-true" *ngIf="(show==true && 
+        aml.general.DNADamage && aml.general.PreviousDiseases &&
+        aml.sign.ProlongedBleedingFromMinorCuts==true &&  aml.sign.SwellingOfTheLymphNodes  &&  aml.sign.Pallor==true  && 
+        aml.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans  &&  aml.symptom.NightSweats && aml.symptom.Fatigue &&
+        aml.labResult.Hyperdiploidy==true &&  aml.labResult.InsufficientNumberOfPlatelets==true && aml.labResult.InsufficientAmountOfNeutrophils==true && aml.labResult.InsufficientAmountOfRedBloodCells==true) ||
+        (aml.general.DNADamage && aml.general.PreviousDiseases &&
+        aml.sign.Weightloss && aml.sign.SwellingOfTheLymphNodes && aml.sign.AppearanceOfRedDotOnTheSkin &&
+        aml.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans &&  aml.symptom.Dizziness &&
+        aml.labResult.ETP && aml.labResult.InsufficientAmountOfRedBloodCells && show==true )">
+            <app-detalle-diagnostico  [aml]=aml [isPatient]=isPatient [showAml]=showAml> </app-detalle-diagnostico>
+        </div> 
+        <div class="aml-false" *ngIf="showAml==false && showfalse==true">
+            <app-detallediagnosticoamlfalse [aml]=aml [isPatient]=isPatient [showAml]=showAml></app-detallediagnosticoamlfalse>
+        </div>
+        <!--//!.col-->
     </div>
 
     <!-- //**03-->
     <div class="row" *ngIf="!isPatient && disease==3">
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpanded" (click)="toggle()">
                     General
@@ -768,7 +837,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedA" (click)="toggleA()">
                     Signos
@@ -786,7 +855,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.UnexplainedWeightLoss" name="UnexplainedWeightLoss" id="checkbox64">
                                     <label class="form-check-label" for="checkbox64">
-                                  Pérdida de peso sin explicación
+                                  Pérdida de peso 
                             </label>
                                 </div>
                                 <div class="form-check">
@@ -825,6 +894,12 @@
                               Inflamación de las encías
                         </label>
                                 </div>
+                                <div class="form-check checkbox">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="cml.sign.ProlongedBleedingFromMinorCuts" name="ProlongedBleedingFromMinorCuts" id="checkbox87">
+                                    <label class="form-check-label" for="checkbox87">
+                                        Sangrado prolongado por cortaduras leves 
+                        </label>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -832,7 +907,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedB" (click)="toggleB()">
                     Sintomas
@@ -862,7 +937,7 @@
                                 <div class="form-check checkbox">
                                     <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.Fever" name="Fever" id="checkbox73">
                                     <label class="form-check-label" for="checkbox73">
-                                  Fiebre
+                                  Fiebre Prolongada
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
@@ -886,7 +961,7 @@
                                 <div class="form-check checkbox">
                                     <input class="form-check-input" type="checkbox" [(ngModel)]="cml.symptom.PainOrAFeelingOfFullnessUnderTheRibs" name="PainOrAFeelingOfFullnessUnderTheRibs" id="checkbox77">
                                     <label class="form-check-label" for="checkbox77">
-                                  Dolor o sensación de saciedad debajo de las costillas
+                                        Dolor o sensación de saciedad debajo de las costillas, en el lado izquierdo debido al agrandamiento del bazo 
                             </label>
                                 </div>
                                 <div class="form-check checkbox">
@@ -914,7 +989,7 @@
             </div>
         </div>
         <!--/.col-->
-        <div class="col-md-6">
+        <div class="col-md-6" *ngIf="!isPatient && showCml==true">
             <div class="card">
                 <div class="card-header" [class.expanded]="isExpandedC" (click)="toggleC()">
                     Resultados de Laboratorio
@@ -965,10 +1040,8 @@
                 </div>
             </div>
         </div>
-
-
         <!--/.col-->
-        <div class="col-md-6" align="center">
+        <div class="col-md-6" align="center" *ngIf="!isPatient && showCml==true">
             <div class="card">
                 <div class="card-body">
                     <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsCml()">
@@ -980,66 +1053,34 @@
             </div>
         </div>
         <!--/.col-->
+         <!--//!.col-->
+        <div class="cml-true" *ngIf="(showC==true && cml.general.RadiationExposure && cml.general.DNADamage && 
+        cml.sign.UnexplainedWeightLoss && cml.sign.GumOrNoseBleeds &&  cml.sign.Bruising &&  cml.sign.ProlongedBleedingFromMinorCuts  &&  
+        cml.symptom.Fever && cml.symptom.FeelingTired && cml.symptom.Dizziness  && 
+        cml.labResult.InsufficientAmountOfRedBloodCells && cml.labResult.PhiladelphiaChromosome)  ||
+        (showC==true && cml.general.RadiationExposure && cml.general.DNADamage && 
+        cml.sign.GumOrNoseBleeds && cml.sign.Bruising &&  cml.sign.DisseminatedNodules && 
+        cml.symptom.Drowsiness && cml.symptom.Headache && cml.symptom.BlurryVision 
+        && cml.labResult.ElevatedNumberOfWhiteBloodCells  && cml.labResult.InsufficientAmountOfRedBloodCells
+         && cml.labResult.FusionGeneBCRABL1) ||
+         (showC==true && cml.general.RadiationExposure && 
+         cml.symptom.Fatigue && cml.sign.Pallor &&  cml.sign.Bruising &&  cml.sign.Infections && 
+         cml.symptom.Dizziness  && 
+         cml.labResult.ElevatedNumberOfWhiteBloodCells  && cml.labResult.InsufficientAmountOfRedBloodCells
+         && cml.labResult.PhiladelphiaChromosome)">
+            <app-detallediagnosticocml  [cml]=cml [isPatient]=isPatient [showCml]=showCml> </app-detallediagnosticocml>
+        </div> 
+        <div class="cml-false" *ngIf="showCml==false && showCfalse==true">
+            <app-detallediagnosticocmlfalse [cml]=cml [isPatient]=isPatient [showCml]=showCml></app-detallediagnosticocmlfalse>
+        </div>
+        <!--//!.col-->
+
+        
     </div>
   <!--/.col-->
 
   
-    <div class="row" *ngIf="!isPatient && disease==4">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header" [class.expanded]="isExpanded" (click)="toggle()">
-                    Persona
-                    <span class="iconpos" [ngClass]="{
-                'fas fa-caret-square-down': isExpanded,
-                 'fas fa-caret-square-down': !isExpanded
-              }"></span>
-                </div>
-
-                <div *ngIf="isExpanded" class="card-body">
-                    <form class="form-horizontal">
-                        <div class="form-group row">
-                            <label class="col-md-3 col-form-label">Persona</label>
-                            <div class="col-md-9 col-form-label">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="persona.Id" name="Id" id="checkbox37">
-                                    <label class="form-check-label" for="checkbox37">
-                                  Id
-                            </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="persona.Nombre" name="Nombre" id="checkbox38">
-                                    <label class="form-check-label" for="checkbox38">
-                                Nombre
-                            </label>
-                                </div>
-                                <div class="form-check checkbox">
-                                    <input class="form-check-input" type="checkbox" [(ngModel)]="persona.Edad" name="Edad" id="checkbox39">
-                                    <label class="form-check-label" for="checkbox39">
-                                  Edad
-                            </label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- -->
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!--/.col-->
-        <div class="col-md-6" align="center">
-            <div class="card">
-                <div class="card-body">
-                    <button type="submit" class="btn btn-primary" style="width:40%;" (click)="onSendCardsPersona()">
-                    <i class="fa fa-dot-circle-o"></i>
-                    Enviar</button>
-                    <button type="reset" class="btn btn-danger" style="width:40%;" (click)="onBack()">
-                    <i class="fa fa-ban"></i>Regresar</button>
-                </div>
-            </div>
-        </div>
-        <!--/.col-->
-    </div>
-  
+    
 
 
 

@@ -1,4 +1,5 @@
 export class General {
+    Age:boolean
     AdvancedPaternalAge:boolean
     MaternalFetalLoss:boolean
     XRayExposureAtBirth:boolean
@@ -9,6 +10,7 @@ export class General {
     PreviousInjuries:boolean
     RadiationExposure :boolean
     constructor(){
+        this.Age,
         this.AdvancedPaternalAge,
         this.MaternalFetalLoss,
         this.XRayExposureAtBirth,

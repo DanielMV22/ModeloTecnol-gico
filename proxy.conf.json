@@ -1,0 +1,7 @@
+{
+    "/Diagnostico/*": {
+      "target": "http://mtappdtcpapimanagement.azure-api.net",
+      "secure": false,
+      "changeOrigin":false
+    }
+  }

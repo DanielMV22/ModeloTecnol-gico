@@ -1,0 +1,92 @@
+
+<div class="general" >
+    <div class="rec-1">
+        <div class="imagen">
+            <img src="assets/img/diagnostico.png">
+        </div>
+        <div class="titulo-diagnostico">
+            <h1 class="titulo-pediatrico">
+               Diagnóstico del Cancer Pediátrico 
+            </h1>
+        </div>
+        
+    </div>
+    <div class="rec-2">
+        <div class="titulo-cancer">
+            <h2>
+                CÁNCER : LEUCEMIA
+            </h2>
+        </div>
+        <br>
+        <div class="resultados">
+            <h2 class="tipo-leucemia">
+                Leucemia linfoblástica aguda o ALL 
+            </h2>
+        </div>
+        <div class="sint-sig">
+            <div class="blanco">
+
+            </div>
+            <div class="sintomas">
+                 
+                <h2 class="titulo-sintomas">Síntomas</h2>
+                <br>
+                <br>
+                <div *ngIf=" !isPatient && showAll==false" ></div>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.ProlongedFever==true"> Fiebre Prolongada</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.BoneAche==true">Dolor de Huesos</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.SwellingOfTheLymphNodes==true">Inflamación de los Ganglios Linfáticos</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.PetechiaeAndDyspnea==true">Petequias y Disnea</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.Headache==true"> Dolor de Cabeza</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.FeelingTired==true">Sensación de Cansancio</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.LossOfAppetite==true">Pérdida de Apetito</h4>
+            </div>
+            <div class="signos">
+                <h2 class="titulo-signos">Signos</h2>
+                <div *ngIf=" !isPatient && showAll==false" ></div>
+                <br>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.Pallor==true">Palidez</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.EnlargedLiverOrSpleen==true">Hígado o Bazo Agrandado</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.Infections==true">Infecciones</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.Bruises==true">Moretones</h4>
+                <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.LumpsInNeckOrUnderArmOrStomachOrGroinArea==true">Bultos en la Zona del Cuello, Debajo del Brazo, Estómago o Ingle</h4>
+            </div>
+        </div>
+    </div>
+    <div class="rec-3">
+        <div class="tratamiento">
+            <div class="text-tratamiento">
+                <button id="boton-tratamiento" type="submit">
+                  TRATAMIENTO
+                </button>
+        </div>
+
+        </div>
+        <div class="estadio">
+            <h2 class="estadio-nombre">Estadio: </h2>
+            <h2 class="estadio-positivo">Positivo</h2>
+            
+        </div>
+        <div class="blanco">
+
+        </div>
+        <div class="pre">
+            <h5 class="pre-descripcion">Se tiene una probabilidad del 92.86% que el paciente padece de la enfermedad de la leucemia linfoblástica aguda (ALL)</h5>
+          </div>
+        <div class="descrip">
+            <div class="blanco"></div>
+            <div class="t-descripcion">
+              <h2>Descripción</h2>  
+            </div>
+            <div class="p-descripcion">
+                <p>
+                    La leucemia linfoblástica aguda (ALL, por sus siglas en inglés) es un tipo de cáncer de la sangre.
+                <br> <br> <br>
+                Esta enfermedad puede conocerse con diferentes nombres como leucemia linfocítica aguda o leucemia linfoide aguda. Este es el tipo de leucemia más concurrente en los niños.  
+                </p>
+            </div>
+        </div>
+        <div class="blanco"></div>
+    </div>
+      
+</div>

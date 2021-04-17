@@ -17,8 +17,7 @@ export class PatientComponent implements OnInit, OnDestroy {
 
   dtOptions: any = {};
   dtTrigger: Subject<any> = new Subject<any>();
-
-  // status: { isOpen: boolean } = { isOpen: false };
+  
 
   constructor(private medicalService: MedicalService) {
     this.localPatient = medicalService.readLocal("patient");

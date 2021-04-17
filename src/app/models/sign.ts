@@ -20,6 +20,8 @@ export class Sign {
     GumOrNoseBleeds:boolean
     DisseminatedNodules:boolean
     SwollenGums :boolean
+    SwellingOfTheLymphNodes:boolean
+    
     constructor(){
         this.Pallor,
         this.EnlargedLiverOrSpleen,
@@ -41,6 +43,7 @@ export class Sign {
          this.Bruising,
          this.GumOrNoseBleeds,
          this.DisseminatedNodules,
+         this.SwellingOfTheLymphNodes,
          this.SwollenGums
     }
 }

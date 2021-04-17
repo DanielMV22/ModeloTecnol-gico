@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { All} from '../../../models/all';
 import { Cll } from '../../../models/cll';
 import { Aml } from '../../../models/aml';
 import { Cml} from '../../../models/cml';
 import { MedicalService } from '../../../services/medical.service';
-import { Persona } from '../../../models/Persona';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   templateUrl: './diagnostic.component.html',
@@ -12,15 +12,45 @@ import { Persona } from '../../../models/Persona';
 })
 export class DiagnosticComponent implements OnInit{
 
-  isPatient = true;
+ isPatient = true;
   patient;
   patientList=[];
-  localPatient:any;
+  
   required=false;
+
+
+  localPatient:any;
+
   isExpanded: boolean;
   isExpandedA: boolean;
   isExpandedB: boolean;
   isExpandedC: boolean;
+
+//! AML
+  show=false;
+  showAml=true;
+  showfalse=true;
+  
+//!ALL
+
+  showA=false;
+  showAll=true;
+  showAfalse=true;
+
+  //!CLL
+
+  showB=false;
+  showCll=true;
+  showBfalse=true;
+
+   //!CML
+
+   showC=false;
+   showCml=true;
+   showCfalse=true;
+ 
+
+
 
   toggle()  { this.isExpanded = !this.isExpanded;   }
   toggleA() { this.isExpandedA = !this.isExpandedA; }
@@ -39,11 +69,11 @@ export class DiagnosticComponent implements OnInit{
   cll: Cll= new Cll();
   aml: Aml= new Aml();
   cml: Cml= new Cml();
-  persona: Persona= new Persona();
+
+
 
   constructor(private medicalService: MedicalService) {
     this.localPatient = medicalService.readLocal("patient");
-
   }
 
   ngOnInit() {
@@ -68,43 +98,79 @@ export class DiagnosticComponent implements OnInit{
       return;
     }
     this.isPatient=false;
+   
     this.required=false;
     console.log(this.patient);
   }
 
+  limpiar(){
+    if(this.showfalse==true){
+      this.showfalse=false;
+    }else{
+    this.showfalse=true;
+    }
+    if(this.showAfalse==true){
+      this.showAfalse=false;
+    }else{
+    this.showAfalse=true;
+    }
+    if(this.showBfalse==true){
+      this.showBfalse=false;
+    }else{
+    this.showBfalse=true;
+    }
+    if(this.showCfalse==true){
+      this.showCfalse=false;
+    }else{
+    this.showCfalse=true;
+    }
+   
+  }
+  
+
   onBack(){
     this.isPatient=true;
+    this.show=false;
+    this.showA=false;
+    this.showB=false;
+    this.showC=false;
     this.all=new All();
     this.cll=new Cll();
     this.aml=new Aml();
     this.cml=new Cml();
-    this.persona=new Persona();
   }
 
   onSendCardsAll(){
-      this.medicalService.addAll(this.all).subscribe((response: All)=> console.log(response));
+      //this.medicalService.addAll(this.all).subscribe((response: All)=> console.log(response));
     //console.log(this.all);
+
+    this.showA=true;
+    this.showAll=false;
   }
   
   onSendCardsCll(){
     this.medicalService.addCll(this.cll).subscribe((response: Cll )=> console.log(response));
+
+    this.showB=true;
+    this.showCll=false;
    // console.log(this.cll);
   }
   onSendCardsAml(){
     this.medicalService.addAml(this.aml).subscribe((response: Aml)=> console.log(response));
-    //console.log(this.aml);
+    this.show=true;
+    this.showAml=false;
+
+    console.log(this.aml.sign.AppearanceOfRedDotOnTheSkin);
   }
   onSendCardsCml(){
-    this.medicalService.addCml(this.cml).subscribe((response: Cml)=> console.log(response));
-   // console.log(this.cml);
+    //this.medicalService.addCml(this.cml).subscribe((response: Cml)=> console.log(response));
+
+    this.showC=true;
+    this.showCml=false;
+
   }
 
-/* //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  onSendCardsPersona(){
-    //console.log(this.persona);
-    this.medicalService.addPersona(this.persona).subscribe((response: Persona)=> console.log(response));
-  }
-*/
+
 
 
 }
@@ -112,16 +178,3 @@ export class DiagnosticComponent implements OnInit{
 
 
 
-
-
-  /*
-  constructor(private http: HttpClient){}
-
-  onSendCards(data){
-   
-   this.http.post('http://......:###/diagnostic',data)
-   .subscribe((result)=>{
-     console.warn("result",result)
-   })
-  }
-  */
