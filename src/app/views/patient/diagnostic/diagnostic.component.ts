@@ -141,7 +141,7 @@ export class DiagnosticComponent implements OnInit{
   }
 
   onSendCardsAll(){
-      //this.medicalService.addAll(this.all).subscribe((response: All)=> console.log(response));
+    this.medicalService.addAll(this.all).subscribe((response: All)=> console.log(response));
     //console.log(this.all);
 
     this.showA=true;
@@ -163,7 +163,7 @@ export class DiagnosticComponent implements OnInit{
     console.log(this.aml.sign.AppearanceOfRedDotOnTheSkin);
   }
   onSendCardsCml(){
-    //this.medicalService.addCml(this.cml).subscribe((response: Cml)=> console.log(response));
+    this.medicalService.addCml(this.cml).subscribe((response: Cml)=> console.log(response));
 
     this.showC=true;
     this.showCml=false;
