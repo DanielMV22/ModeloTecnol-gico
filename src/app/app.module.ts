@@ -62,6 +62,13 @@ import { DetallediagnosticocllfalseComponent } from './views/patient/detalles-di
 import { DetallediagnosticoallfalseComponent } from './views/patient/detalles-diagnosticos/detallediagnosticoallfalse/detallediagnosticoallfalse.component';
 import { DetallediagnosticocmlfalseComponent } from './views/patient/detalles-diagnosticos/detallediagnosticocmlfalse/detallediagnosticocmlfalse.component';
 
+import{DetalletratamientoallComponent} from "./views/patient/detalles-tratamientos/detalletratamientoall/detalletratamientoall.component";
+import{DetalletratamientoamlComponent} from "./views/patient/detalles-tratamientos/detalletratamientoaml/detalletratamientoaml.component";
+import{DetalletratamientocllComponent} from "./views/patient/detalles-tratamientos/detalletratamientocll/detalletratamientocll.component";
+import{DetalletratamientocmlComponent} from "./views/patient/detalles-tratamientos/detalletratamientocml/detalletratamientocml.component";
+
+
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -99,7 +106,13 @@ import { DetallediagnosticocmlfalseComponent } from './views/patient/detalles-di
     DetallediagnosticocllComponent, //CLL
     DetallediagnosticocmlComponent,//CML
     DetallediagnosticoallComponent,//ALLL
-    RegisterComponent
+    RegisterComponent,
+
+    DetalletratamientoallComponent,
+    DetalletratamientoamlComponent,
+    DetalletratamientocmlComponent,
+    DetalletratamientocllComponent
+  
    
   ],
   providers: [

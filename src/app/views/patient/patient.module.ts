@@ -16,6 +16,10 @@ import { DetallediagnosticocllComponent } from './detalles-diagnosticos/detalled
 import { DetallediagnosticocllfalseComponent } from './detalles-diagnosticos/detallediagnosticocllfalse/detallediagnosticocllfalse.component';
 import { DetallediagnosticocmlComponent } from './detalles-diagnosticos/detallediagnosticocml/detallediagnosticocml.component';
 import { DetallediagnosticocmlfalseComponent } from './detalles-diagnosticos/detallediagnosticocmlfalse/detallediagnosticocmlfalse.component';
+import { DetalletratamientoamlComponent } from './detalles-tratamientos/detalletratamientoaml/detalletratamientoaml.component';
+import { DetalletratamientocmlComponent } from './detalles-tratamientos/detalletratamientocml/detalletratamientocml.component';
+import { DetalletratamientocllComponent } from './detalles-tratamientos/detalletratamientocll/detalletratamientocll.component';
+import { DetalletratamientoallComponent } from './detalles-tratamientos/detalletratamientoall/detalletratamientoall.component';
 
 
 @NgModule({

@@ -15,9 +15,13 @@ export class DetallediagnosticocllComponent  {
   @Input() cll: Cll;
   @Input() isPatient:boolean;
   @Input() showCll:boolean;
-  
+  showGeneral=true;
+
   constructor() { }
 
- 
+  
+  onSendCardsTratamientoAll(){
+    this.showGeneral=false;
+  }
 
 }

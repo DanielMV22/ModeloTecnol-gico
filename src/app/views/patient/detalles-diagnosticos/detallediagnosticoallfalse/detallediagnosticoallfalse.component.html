@@ -1,93 +1,124 @@
 
-    <div class="general" >
-        <div class="rec-1">
-            <div class="imagen">
-                <img src="assets/img/diagnostico.png">
+  <div class="general"  >
+    <div class="rec-1">
+        <div class="imagen">
+            <img src="assets/img/diagnostico.png">
+        </div>
+        <div class="titulo-diagnostico">
+            <h1 class="titulo-pediatrico">
+               Diagnóstico del Cáncer Pediátrico 
+            </h1>
+        </div>
+        
+    </div>
+    <div class="rec-2">
+        <div class="titulo-cancer">
+            <h2>
+                CÁNCER : LEUCEMIA
+            </h2>
+        </div>
+        <br>
+        <div class="resultados">
+            <h2 class="tipo-leucemia">
+                Leucemia Linfoblástica Aguda o ALL
+            </h2>
+        </div>
+        <div class="sint-sig">
+            <div class="blanco">
             </div>
-            <div class="titulo-diagnostico">
-                <h1 class="titulo-pediatrico">
-                   Diagnóstico del Cancer Pediátrico 
-                </h1>
+            <!--//! -->
+            <div class="symtomps">             
+                <input type="checkbox" id="title4" />
+                
+                <label for="title4">General</label>
+                
+                <div class="content">
+                    <br> <br> 
+                    <h4 class="sintomas-signos" *ngIf="all.general.Age==true">Edad: 2 - 5 años</h4>
+                    <h4 class="sintomas-signos" *ngIf="all.general.AdvancedPaternalAge==true">Edad Paterna Avanzada</h4>
+                    <h4 class="sintomas-signos" *ngIf="all.general.MaternalFetalLoss==true">Pérdida Fetal Materna</h4>
+                    <h4 class="sintomas-signos" *ngIf="all.general.XRayExposureAtBirth==true">Exposición a Rayos X en el Nacimiento</h4>
+                    <h4 class="sintomas-signos" *ngIf="all.general.PreviousChemotherapyOrRadiotherapy==true"> Quimioterapia o Radioterapia Previa</h4>
+                    <h4 class="sintomas-signos" *ngIf="all.general.InheritedConditions==true">Afecciones Heredadas</h4>
+                </div>
+            </div>     
+<!--//! -->
+<br>
+<br>
+         <div class="symtomps">             
+            <input type="checkbox" id="title1" />
+            <label for="title1">Sintomas</label>
+            <div class="content">
+                <br>
+                 <h4 class="sintomas-signos" *ngIf="all.symptom.ProlongedFever==true"> Fiebre Prolongada</h4>
+                 <h4 class="sintomas-signos" *ngIf="all.symptom.BoneAche==true">Dolor de Huesos</h4>
+                 <h4 class="sintomas-signos" *ngIf="all.symptom.SwellingOfTheLymphNodes==true">Inflamación de los Ganglios Linfáticos</h4>
+                             <h4 class="sintomas-signos" *ngIf="all.symptom.PetechiaeAndDyspnea==true">Petequias y Disnea</h4>
+                 <h4 class="sintomas-signos" *ngIf="all.symptom.Headache==true"> Dolor de Cabeza</h4>
+                 <h4 class="sintomas-signos" *ngIf="all.symptom.FeelingTired==true">Sensación de Cansancio</h4>
+                 <h4 class="sintomas-signos" *ngIf="all.symptom.LossOfAppetite==true">Pérdida de Apetito</h4>
+             </div>
+        </div>  
+        <br>
+<br>
+            <!--//! -->
+        <div class="symtomps">   
+            <input type="checkbox" id="title2" />
+            <label for="title2">Signos</label>
+            <div class="content">
+                <br>
+                <h4 class="sintomas-signos" *ngIf="  all.sign.Pallor==true">Palidez</h4>
+                <h4 class="sintomas-signos" *ngIf="  all.sign.EnlargedLiverOrSpleen==true">Hígado o Bazo Agrandado</h4>
+                <h4 class="sintomas-signos" *ngIf="  all.sign.Infections==true">Infecciones</h4>
+                <h4 class="sintomas-signos" *ngIf="  all.sign.Bruises==true">Moretones</h4>
+                <h4 class="sintomas-signos" *ngIf=" all.sign.LumpsInNeckOrUnderArmOrStomachOrGroinArea==true">Bultos en la Zona del Cuello, Debajo del Brazo, Estómago o Ingle</h4>
             </div>
+        </div>  
+        <br>
+<br>
+             <!--//! -->
+             <div class="symtomps">   
+                <input type="checkbox" id="title3" />
+                <label for="title3">Resultados de laboratorio</label>
+                <div class="content">
+                    <br> <br> <br>
+                 <h4 class="sintomas-signos" *ngIf="  all.labResult.LeukemicBlasts==true">Blastos Leucémicos > 25%</h4>
+                    <h4 class="sintomas-signos" *ngIf="  all.labResult.WhiteBloodCellCount==true">Recuento de Leucocitos > 50000mm³</h4>
+                    <h4 class="sintomas-signos" *ngIf="  all.labResult.PositiveCytogeneticAnalysis==true">Análisis Citogenético Positivo</h4>
+                </div>
+            </div>  
+         
+             
+        </div>
+    </div>
+    <div class="rec-3">
+        
+        <div class="estadio">
+            <h2 class="estadio-nombre">Estado: </h2>
+            <h2 class="estadio-positivo">Negativo</h2>
             
         </div>
-        <div class="rec-2">
-            <div class="titulo-cancer">
-                <h2>
-                    CÁNCER : LEUCEMIA
-                </h2>
-            </div>
-            <br>
-            <div class="resultados">
-                <h2 class="tipo-leucemia">
-                    Leucemia linfoblástica aguda o ALL 
-                </h2>
-            </div>
-            <div class="sint-sig">
-                <div class="blanco">
+        <div class="blanco">
     
-                </div>
-                <div class="sintomas">
-                 
-                    <h2 class="titulo-sintomas">Síntomas</h2>
-                    <br>
-                    <br>
-                    <div *ngIf=" !isPatient && showAll==false" ></div>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.ProlongedFever==true"> Fiebre Prolongada</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.BoneAche==true">Dolor de Huesos</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.SwellingOfTheLymphNodes==true">Inflamación de los Ganglios Linfáticos</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.PetechiaeAndDyspnea==true">Petequias y Disnea</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.Headache==true"> Dolor de Cabeza</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.FeelingTired==true">Sensación de Cansancio</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.symptom.LossOfAppetite==true">Pérdida de Apetito</h4>
-                </div>
-                <div class="signos">
-                    <h2 class="titulo-signos">Signos</h2>
-                    <div *ngIf=" !isPatient && showAll==false" ></div>
-                    <br>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.Pallor==true">Palidez</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.EnlargedLiverOrSpleen==true">Hígado o Bazo Agrandado</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.Infections==true">Infecciones</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.Bruises==true">Moretones</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAll==false && all.sign.LumpsInNeckOrUnderArmOrStomachOrGroinArea==true">Bultos en la Zona del Cuello, Debajo del Brazo, Estómago o Ingle</h4>
-                </div>
-            </div>
         </div>
-        <div class="rec-3">
-            <div class="tratamiento">
-                <div class="text-tratamiento">
-                    <button id="boton-tratamiento" type="submit">
-                      TRATAMIENTO
-                    </button>
-            </div>
-    
-            </div>
-            <div class="estadio">
-                <h2 class="estadio-nombre">Estado: </h2>
-                <h2 class="estadio-positivo">Negativo</h2>
-                
-            </div>
-            <div class="blanco">
-    
-            </div>
-            <div class="pre">
-                <h5 class="pre-descripcion">Se tiene una probabilidad del 92.86% que el paciente no padece de la enfermedad de la leucemia linfoblástica aguda (ALL)</h5>
-              </div>
-            <div class="descrip">
-                <div class="blanco"></div>
-                <div class="t-descripcion">
-                  <h2>Sugerencias de evaluación</h2>  
-                </div>
-                <div class="p-descripcion">
-                    <p>
-                        En base a los parámetros ingresados, se tiene como resultado de que el paciente tiene una baja probabilidad de padecer leucemia, con una precisión del 92.86%. 
-                    <br> <br> <br>
-                    Se recomienda realizar nuevamente una evaluación al paciente para determinar el tipo de enfermedad que padece.
-                    </p>
-                </div>
-            </div>
+        <div class="pre">
+            <h5 class="pre-descripcion">Este resultado tiene un 7.24% de falsos negativos de que el paciente padezca de la enfermedad de la leucemia linfoblástica aguda (ALL)</h5>
+          </div>
+        <div class="descrip">
             <div class="blanco"></div>
+            <div class="t-descripcion">
+              <h2>Sugerencias de evaluación</h2>  
+            </div>
+            <div class="p-descripcion">
+                <p>
+                    En base a los parámetros ingresados, se tiene como resultado de que el paciente tiene una baja probabilidad de padecer leucemia, con una precisión del 92.86%. 
+                <br> <br> <br>
+                Se recomienda realizar nuevamente una evaluación al paciente para determinar el tipo de enfermedad que padece.
+                </p>
+            </div>
         </div>
-          
+        <div class="blanco"></div>
     </div>
-    
+      
+</div>
+

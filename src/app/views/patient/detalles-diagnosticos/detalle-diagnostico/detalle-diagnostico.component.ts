@@ -10,10 +10,17 @@ import { Aml } from '../../../../models/aml';
 
 //! AML - TRUE
 export class DetalleDiagnosticoComponent   {
-  constructor() { }
+  
   @Input() aml: Aml;
   @Input() isPatient:boolean;
   @Input() showAml:boolean;
+  showGeneral=true;
+
+  constructor() { }
+
   
+  onSendCardsTratamientoAml(){
+    this.showGeneral=false;
+  }
 
 }

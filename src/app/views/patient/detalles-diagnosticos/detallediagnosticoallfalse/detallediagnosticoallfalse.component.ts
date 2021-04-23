@@ -10,7 +10,12 @@ export class DetallediagnosticoallfalseComponent  {
   @Input() all: All;
   @Input() isPatient:boolean;
   @Input() showAll:boolean;
+
+  
+
+  
   constructor() { }
+
 
   
 

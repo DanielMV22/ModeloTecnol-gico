@@ -1,90 +1,131 @@
 
-<div class="general" >
-    <div class="rec-1">
-        <div class="imagen">
-            <img src="assets/img/diagnostico.png">
-        </div>
-        <div class="titulo-diagnostico">
-            <h1 class="titulo-pediatrico">
-               Diagnóstico del Cancer Pediátrico 
-            </h1>
-        </div>
-        
-    </div>
-    <div class="rec-2">
-        <div class="titulo-cancer">
-            <h2>
-                CÁNCER : LEUCEMIA
-            </h2>
-        </div>
-        <br>
-        <div class="resultados">
-            <h2 class="tipo-leucemia">
-                Leucemia linfocítica crónica  o CLL
-            </h2>
-        </div>
-        <div class="sint-sig">
-            <div class="blanco">
 
-            </div>
-            <div class="sintomas">
-                 
-                <h2 class="titulo-sintomas">Síntomas</h2>
-                <br>
-                <br>
-                <div *ngIf=" !isPatient && showCll==false" ></div>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.symptom.NightSweats==true"> Sudores nocturnos </h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.symptom.FeelingFull==true">Sensación de saciedad </h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans==true">Infección de la piel, pulmones, riñones u otros órganos </h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.symptom.ShortOfBreath==true">Falta de aliento </h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.symptom.Exhausted==true">Cansancio extremo </h4>
-            </div>
-            <div class="signos">
-                <h2 class="titulo-signos">Signos</h2>
-                <div *ngIf=" !isPatient && showCll==false" ></div>
-                <br>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.sign.Fatigue==true">Fatiga</h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.sign.ShortnessOfBreathDuringActivities==true">Falta de aliento durante las actividades</h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.sign.EnlargedLymphNodes==true">Agrandamiento de los ganglios linfáticos </h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.sign.LowGradeFever==true">Fiebre de bajo grado </h4>
-                <h4 class="sintomas-signos" *ngIf=" !isPatient && showCll==false && cll.sign.Weightloss==true">Bultos en la Zona del Cuello, Debajo del Brazo, Estómago o InglePérdida de peso </h4>
-            </div>
-        </div>
-    </div>
-    <div class="rec-3">
-        <div class="tratamiento">
-            <div class="text-tratamiento">
-                <button id="boton-tratamiento" type="submit">
-                  TRATAMIENTO
-                </button>
-        </div>
 
-        </div>
-        <div class="estadio">
-            <h2 class="estadio-nombre">Estado: </h2>
-            <h2 class="estadio-positivo">Positivo</h2>
+<div>
+    <div class="general" *ngIf="showGeneral==true" >
+        <div class="rec-1">
+            <div class="imagen">
+                <img src="assets/img/diagnostico.png">
+            </div>
+            <div class="titulo-diagnostico">
+                <h1 class="titulo-pediatrico">
+                   Diagnóstico del Cáncer Pediátrico 
+                </h1>
+            </div>
             
         </div>
-        <div class="blanco">
-
+        <div class="rec-2">
+            <div class="titulo-cancer">
+                <h2>
+                    CÁNCER : LEUCEMIA
+                </h2>
+            </div>
+            <br>
+            <div class="resultados">
+                <h2 class="tipo-leucemia">
+                    Leucemia Linfocítica Crónica  o CLL
+                </h2>
+            </div>
+            <div class="sint-sig">
+                <div class="blanco">
+                </div>
+                <!--//! -->
+                <div class="symtomps">             
+                    <input type="checkbox" id="title4" />
+                    
+                    <label for="title4">General</label>
+                    
+                    <div class="content">
+                        <br><br> <br> 
+                        <h4 class="sintomas-signos" *ngIf="cll.general.PreviousDiseases==true">Enfermedades previas</h4>
+                       
+                    </div>
+                </div>     
+    <!--//! -->
+    <br>
+    <br>
+             <div class="symtomps">             
+                <input type="checkbox" id="title1" />
+                <label for="title1">Sintomas</label>
+                <div class="content">
+                    <br>
+                    <h4 class="sintomas-signos" *ngIf=" cll.symptom.NightSweats==true"> Sudores nocturnos </h4>
+                    <h4 class="sintomas-signos" *ngIf=" cll.symptom.FeelingFull==true">Sensación de saciedad </h4>
+                    <h4 class="sintomas-signos" *ngIf=" cll.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans==true">Infección de la piel, pulmones, riñones u otros órganos </h4>
+                    <h4 class="sintomas-signos" *ngIf=" cll.symptom.ShortOfBreath==true">Falta de aliento </h4>
+                    <h4 class="sintomas-signos" *ngIf=" cll.symptom.Exhausted==true">Cansancio extremo </h4>
+                 </div>
+            </div>  
+            <br>
+    <br>
+                <!--//! -->
+            <div class="symtomps">   
+                <input type="checkbox" id="title2" />
+                <label for="title2">Signos</label>
+                <div class="content">
+                    <br>
+                    <h4 class="sintomas-signos" *ngIf=" cll.sign.Fatigue==true">Fatiga</h4>
+                <h4 class="sintomas-signos" *ngIf=" cll.sign.ShortnessOfBreathDuringActivities==true">Falta de aliento durante las actividades</h4>
+                <h4 class="sintomas-signos" *ngIf="  cll.sign.EnlargedLymphNodes==true">Agrandamiento de los ganglios linfáticos </h4>
+                <h4 class="sintomas-signos" *ngIf=" cll.sign.LowGradeFever==true">Fiebre de bajo grado </h4>
+                <h4 class="sintomas-signos" *ngIf=" cll.sign.Weightloss==true">Pérdida de peso </h4>
+                </div>
+            </div>  
+            <br>
+    <br>
+                 <!--//! -->
+                 <div class="symtomps">   
+                    <input type="checkbox" id="title3" />
+                    <label for="title3">Resultados de laboratorio</label>
+                    <div class="content">
+                        <br>
+                     <h4 class="sintomas-signos" *ngIf="  cll.labResult.InsufficientNumberOfPlatelets==true">Cantidad insuficiente de plaquetas < 10,000/Ul</h4>
+                        <h4 class="sintomas-signos" *ngIf="  cll.labResult.CD38==true">CD38</h4>
+                        <h4 class="sintomas-signos" *ngIf="  cll.labResult.Beta2Microglobulin==true">Microglobulina beta-2</h4>
+                        <h4 class="sintomas-signos" *ngIf="  cll.labResult.AbnormalIncreaseLymphocytesBlood==true">Aumento anormal de cantidad de linfocitos en la sangre</h4>
+                        <h4 class="sintomas-signos" *ngIf="  cll.labResult.Anemia==true">Anemia</h4>
+                    </div>
+                </div>  
+             
+                 
+            </div>
         </div>
-        <div class="pre">
-            <h5 class="pre-descripcion">Se tiene una probabilidad del 92.86% que el paciente padece de la enfermedad de la leucemia linfocítica crónica (CLL)</h5>
-          </div>
-        <div class="descrip">
+        <div class="rec-3">
+            
+            <div class="estadio">
+                <h2 class="estadio-nombre">Estado: </h2>
+                <h2 class="estadio-positivo">Positivo</h2>
+                
+            </div>
+            <div class="blanco">
+    
+            </div>
+            <div class="pre">
+                <h5 class="pre-descripcion">Se tiene una precisión del 92.86% que el paciente padece de la enfermedad de la leucemia linfocítica crónica (CLL).</h5>
+              </div>
+            <div class="descrip">
+                <div class="blanco"></div>
+                <div class="t-descripcion">
+                  <h2>Descripción</h2>  
+                </div>
+                <div class="p-descripcion">
+                    <p>
+                        La leucemia linfocítica crónica (CLL, por sus siglas en inglés) es un tipo de cáncer de la sangre. Este tipo de leucemia se inicia con una mutación en el linfocito (células leucémicas) donde de forma descontrolada, se acumulan en la sangre, médula ósea, bazo y ganglios linfáticos.
+                    <br> <br> <br>
+                    El sistema linfático forma parte del sistema inmunitario, que ayuda a proteger al organismo de las infecciones y enfermedades. 
+                    </p>
+                </div>
+            </div>
             <div class="blanco"></div>
-            <div class="t-descripcion">
-              <h2>Descripción</h2>  
-            </div>
-            <div class="p-descripcion">
-                <p>
-                    La leucemia linfocítica crónica (CLL, por sus siglas en inglés) es un tipo de cáncer de la sangre. Este tipo de leucemia se inicia con una mutación en el linfocito (células leucémicas) donde de forma descontrolada, se acumulan en la sangre, médula ósea, bazo y ganglios linfáticos.
-                <br> <br> <br>
-                El sistema linfático forma parte del sistema inmunitario, que ayuda a proteger al organismo de las infecciones y enfermedades. 
-                </p>
-            </div>
+                <div class="tratamiento">
+                    <div>
+                        <button  type="submit" class="button-tratamiento" (click)="onSendCardsTratamientoAll()" > TRATAMIENTO  </button>   
+                   </div>
+                </div>
         </div>
-        <div class="blanco"></div>
+          
     </div>
-      
-</div>
+    <app-detalletratamientocll *ngIf="showGeneral==false"></app-detalletratamientocll>
+    </div>
+    
+    

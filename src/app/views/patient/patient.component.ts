@@ -26,7 +26,7 @@ export class PatientComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.dtOptions = {
       dom: 'Bfrtip',
-      buttons: ['copy', 'print', 'excel']
+      buttons: [ 'excel']
     };
     if (this.localPatient != null) {
       let arr = this.medicalService.readLocal("patient");

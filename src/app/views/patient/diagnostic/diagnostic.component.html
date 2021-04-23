@@ -282,10 +282,12 @@
           all.sign.EnlargedLiverOrSpleen &&  
           all.symptom.ProlongedFever  && 
           all.labResult.WhiteBloodCellCount  && all.labResult.PositiveCytogeneticAnalysis)">
-            <app-detallediagnosticoall [all]=all [isPatient]=isPatient [showAll]=showAll></app-detallediagnosticoall>
+            <app-detallediagnosticoall [all]=all [isPatient]=isPatient [showAll]=showAll>
+            </app-detallediagnosticoall>
         </div> 
-        <div class="all-false" *ngIf="showAll==false && showAfalse==true">
-    <app-detallediagnosticoallfalse [all]=all [isPatient]=isPatient [showAll]=showAll></app-detallediagnosticoallfalse>
+
+        <div class="all-false" *ngIf="showA==false">
+    <app-detallediagnosticoallfalse [all]=all [isPatient]=isPatient [showAll]=showAll> </app-detallediagnosticoallfalse>
         </div>
 <!--//!.col-->
 
@@ -506,7 +508,7 @@
         )">
         <app-detallediagnosticocll [cll]=cll [isPatient]=isPatient [showCll]=showCll></app-detallediagnosticocll>
         </div> 
-        <div class="cll-false" *ngIf="showCll==false && showBfalse==true">
+        <div class="cll-false" *ngIf="showB==false">
             <app-detallediagnosticocllfalse [cll]=cll [isPatient]=isPatient [showCll]=showCll></app-detallediagnosticocllfalse>
         </div>
         <!--//!.col-->
@@ -794,7 +796,7 @@
         aml.labResult.ETP && aml.labResult.InsufficientAmountOfRedBloodCells && show==true )">
             <app-detalle-diagnostico  [aml]=aml [isPatient]=isPatient [showAml]=showAml> </app-detalle-diagnostico>
         </div> 
-        <div class="aml-false" *ngIf="showAml==false && showfalse==true">
+        <div class="aml-false" *ngIf="show==false ">
             <app-detallediagnosticoamlfalse [aml]=aml [isPatient]=isPatient [showAml]=showAml></app-detallediagnosticoamlfalse>
         </div>
         <!--//!.col-->
@@ -1070,7 +1072,7 @@
          && cml.labResult.PhiladelphiaChromosome)">
             <app-detallediagnosticocml  [cml]=cml [isPatient]=isPatient [showCml]=showCml> </app-detallediagnosticocml>
         </div> 
-        <div class="cml-false" *ngIf="showCml==false && showCfalse==true">
+        <div class="cml-false" *ngIf="showC==false ">
             <app-detallediagnosticocmlfalse [cml]=cml [isPatient]=isPatient [showCml]=showCml></app-detallediagnosticocmlfalse>
         </div>
         <!--//!.col-->

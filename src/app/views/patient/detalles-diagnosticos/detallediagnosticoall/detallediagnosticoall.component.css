@@ -14,7 +14,7 @@
     margin:auto;
     margin-top: 10px;
  
-
+ /*   /* border-style: solid; */
     /*width: 1500px;*/
     /*height: 900px;*/
     width: 1600px;
@@ -29,7 +29,7 @@
     margin: 1em;
     width: 1550px;
     height: 150px;
-   /* border-style: solid;*/
+  /* border-style: solid; */
    /* background-color: red;*/
     float:left
     
@@ -40,27 +40,22 @@ img{
     width: 110px;
     height: 90px;
     border: 5px solid #555;
-  /*  border-style: solid;*/
+  /*  /* border-style: solid; */
     /*background-color: black;*/ 
 }
 
 .titulo-diagnostico{
     margin: 1em;
     margin-top: 35px;
-    margin-left: 85px;
-    width: 600px;
+    margin-left: 250px;
+    width: 900px;
     height: 90px;
     text-align: center;
-    /* border-style: solid;*/
+    /*  border-style: solid;  */
     /*background-color: green;*/
 }
 
-.pre{
-    margin-top: 35px;
-    margin-left: 85px;
-    width: 600px;
-    height: 300px;
-}
+
 .pre-descripcion{
     font-family: 'Exo', sans-serif;
     text-align: center;
@@ -78,7 +73,7 @@ img{
     height: 680px;
     /*background-color: yellow;*/
     float:left;
-   /* border-style: solid;*/
+  /*  /* border-style: solid; */
     overflow: scroll;
 
 }
@@ -97,8 +92,9 @@ li{
 
     margin: 1em;
     font-family: 'Montserrat', sans-serif;
-   /* border-style: solid;*/
+   /* /* border-style: solid; */
     color: black;
+    text-align: center;
     animation: fadeIn linear 7s;
     -webkit-animation: fadeIn linear 7s;
     -moz-animation: fadeIn linear 7s;
@@ -132,13 +128,14 @@ li{
   }
 
 .t-descripcion{
-    margin: 1em;
+   
     margin-top: 15px;
-    margin: 1em;
-    width: 615px;
+   
+    width: 635px;
     height: 50px;
     font-family: 'Dela Gothic One', cursive;
-   /* border-style: solid;*/
+    /* border-style: solid; */
+    text-align: center;
 }
 
 .titulo-pediatrico{
@@ -146,12 +143,13 @@ li{
     position: relative;
     font-family: 'Dela Gothic One', cursive;
    text-align: center;
+  /* border-style: solid;*/
 }
 
 .titulo-pediatrico::after,.titulo-pediatrico::before{
     content: '';
     position: absolute;
-    width: 100px;
+    width: 60px;
     height: 3px;
     background-color: black;
     top:0.6em;
@@ -175,11 +173,12 @@ li{
 .titulo-cancer{
     margin: 1em;
     width: 615px;
+    margin-left: 40px;
     height: 45px;
     font-family: 'Dela Gothic One', cursive;
     font-weight: 300;
     text-align: center;
-    /* border-style: solid;*/
+    /* /* border-style: solid; */
 /*  background-color: green;*/
 }
 
@@ -189,7 +188,7 @@ li{
     height: 85px;
     text-align: center;
     font-family: 'Dela Gothic One', cursive;
-   /* border-style: solid;*/
+   /* /* border-style: solid; */
    /* background-color: green;*/
     
 }
@@ -198,7 +197,7 @@ li{
     margin: 1em;
     width: 615px;
     height: 485px;
-    /* border-style: solid;*/
+    /* /* border-style: solid; */
  /* background-color: black;*/
 }
 
@@ -206,15 +205,16 @@ li{
     width: 615px;
     height: 15px;
     background-color: #e4e5e6; 
-
+    /* border-style: solid; */
 }
 
 .sintomas{
     margin-top: 10px;
     width: 615px;
     height: 210px;
+    text-align: center;
     font-family: 'Exo', sans-serif;
-   /*  border-style: solid;*/ 
+    /* /* border-style: solid; */
    /* background-color: green;   */ 
 }
 .titulo-sintomas{
@@ -293,7 +293,7 @@ li{
     width: 615px;
     height: 270px;
     font-family: 'Exo', sans-serif;
-    /*border-style: solid;*/
+    /*/* border-style: solid; */
    /* background-color: green;*/
     
 }
@@ -312,16 +312,48 @@ li{
     margin-right: 50px;
     width: 650px;
     height: 680px;
-    /* border-style: solid;*/
+     /* border-style: solid; */
    /* background-color: skyblue;*/
     float:right;
     overflow: scroll;
 }
+
+
+.pre::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #6AAB95;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#6AAB95, #6AAB95), linear-gradient(#6AAB95, #6AAB95), linear-gradient(#6AAB95, #6AAB95), linear-gradient(#6AAB95, #6AAB95);
+  -webkit-animation: rotate 4s linear infinite;
+          animation: rotate 4s linear infinite;
+}
+.pre::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: #e4e5e6;
+  border-radius: 5px;
+}
+
+
+
 .precision{
     margin: 1em;
     width: 615px;
     height: 60px;
-  border-style: solid;
+ /* border-style: solid; */
 }
 
 
@@ -332,11 +364,15 @@ li{
     height: 50px;
     display: flex;
     
-    /*border-style: solid;*/
+    /* border-style: solid; */
    /* background-color: green;*/
 }
+
+
+
 .text-tratamiento{
     font-family: 'Dela Gothic One', cursive;
+    height: 50px;
 }
 .estadio-nombre{
     margin-left: 155px;
@@ -363,21 +399,26 @@ li{
     transform: rotate(1turn);
   }
 }
+
+.pre{
+  margin-top: 35px;
+  margin-left: 85px;
+  width: 600px;
+  height: 300px;
+}
+
 .pre {
-    margin-top: 1px;
-    margin: 1em;
-    width: 615px;
-    height: 100px;
-  
-   /* background-color: green;*/
-    /*border-style: solid;*/
+  margin-top: 1px;
+  margin: 1em;
+  width: 615px;
+  height: 100px;
 
   position: relative;
   z-index: 0;
-  
   border-radius: 10px;
-  overflow: hidden;
   padding: 2rem;
+  
+  overflow: hidden;
 }
 .pre::before {
   content: "";
@@ -407,9 +448,15 @@ li{
   border-radius: 5px;
 }
 
+.tratamiento{
+  width: 120px;
+  height: 120px;
+  /* border-style: solid; */
+  text-align: center;
+  width: 635px;
+}
 
-
-
+/*
 
 button {
     padding: 100px;
@@ -443,5 +490,89 @@ button {
     background: #000;
     color: #fff;
     transition: none;
-  }
+  }*/
   
+
+  /* ************* */
+
+  input {
+    display: none;
+}
+
+label {
+    display: block;  
+    width:594px;  
+    padding: 8px 22px;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    background: #CD624A;
+    border-radius: 3px;
+    color: #FFF;
+    transition: ease .5s;
+}
+
+label:hover {
+    background: #CD624A;
+}
+
+.content {
+    background: #e4e5e6;
+    padding: 10px 25px;
+    border: 1px solid #A7A7A7;
+    margin: 0 0 1px 0;
+    border-radius: 3px;
+    width: 594px;
+    text-align: center;
+}
+
+input + label + .content {
+	opacity: 0;
+	height: 0;
+	font-size: 0;
+	padding: 0 25px;
+	transition: ease .5s;
+}
+
+input:checked + label + .content {
+	opacity: 1;
+	height: 235px;
+	font-size: 14px;
+	padding: 10px 25px;
+}
+
+.symtomps{
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+  font-size: 20px;
+}
+
+.signs{
+  text-align: center;
+}
+
+.button-tratamiento{
+  font-family: "Roboto",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background:#6596D7 ;
+  width: 160px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration:0.3s;
+  transition-duration:0.3s;
+  -webkit-transition-property: box-shadow,transform;
+  transition-property: box-shadow,transform;
+}
+.button-tratamiento:hover, .button-tratamiento:focus, .button-tratamiento:active{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+
+
+}

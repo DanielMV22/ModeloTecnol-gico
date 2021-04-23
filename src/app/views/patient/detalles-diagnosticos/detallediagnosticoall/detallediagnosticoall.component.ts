@@ -15,10 +15,13 @@ export class DetallediagnosticoallComponent  {
   @Input() all: All;
   @Input() isPatient:boolean;
   @Input() showAll:boolean;
-
+  showGeneral=true;
 
   constructor() { }
 
   
+  onSendCardsTratamientoAll(){
+    this.showGeneral=false;
+  }
 
 }

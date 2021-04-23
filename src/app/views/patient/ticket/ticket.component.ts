@@ -11,7 +11,7 @@ export class TicketComponent implements OnInit {
 
   @ViewChild('largeModal') public largeModal: ModalDirective;
 
-  tickets: Ticket[] = [];;
+  tickets: Ticket[] = [];
   ticketNew:Ticket = new Ticket();
   fecha = new Date();
   dtOptions: any = {};
@@ -23,7 +23,7 @@ export class TicketComponent implements OnInit {
   ngOnInit() {
     this.dtOptions = {
       dom: 'Bfrtip',
-      buttons: ['copy', 'print', 'excel']
+      buttons: []
     };
     this.medicalService.getTickets().subscribe(
       resp => {
@@ -44,7 +44,7 @@ export class TicketComponent implements OnInit {
   }
 
   onSaveEdit() {
-    this.ticketNew.ticket='#TK002';
+    this.ticketNew.ticket='#TK002';//CAMBIAR CON UN EVENTO  
     this.ticketNew.date=this.fecha.getDate()+'/'+this.fecha.getMonth()+'/'+this.fecha.getFullYear();
     this.tickets.push(this.ticketNew);
     // this.medicalService.writeLocall("patient", this.tickets);

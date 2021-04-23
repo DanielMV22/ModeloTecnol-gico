@@ -1,100 +1,132 @@
 
+
+
+<div class="general"  >
+    <div class="rec-1">
+        <div class="imagen">
+            <img src="assets/img/diagnostico.png">
+        </div>
+        <div class="titulo-diagnostico">
+            <h1 class="titulo-pediatrico">
+               Diagnóstico del Cáncer Pediátrico 
+            </h1>
+        </div>
         
-    <div class="general" >
-        <div class="rec-1">
-            <div class="imagen">
-                <img src="assets/img/diagnostico.png">
+    </div>
+    <div class="rec-2">
+        <div class="titulo-cancer">
+            <h2>
+                CÁNCER : LEUCEMIA
+            </h2>
+        </div>
+        <br>
+        <div class="resultados">
+            <h2 class="tipo-leucemia">
+                Leucemia Mileoide Aguda o AML
+            </h2>
+        </div>
+        <div class="sint-sig">
+            <div class="blanco">
             </div>
-            <div class="titulo-diagnostico">
-                <h1 class="titulo-pediatrico">
-                   Diagnóstico del Cancer Pediátrico 
-                </h1>
-            </div>
+            <!--//! -->
+            <div class="symtomps">             
+                <input type="checkbox" id="title4" />
+                
+                <label for="title4">General</label>
+                
+                <div class="content">
+                    <br> <br> <br>   <br> 
+                    <h4 class="sintomas-signos" *ngIf="aml.general.DNADamage==true">Lesión en el ADN</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.general.PreviousDiseases==true">Enfermedades previas</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.general.PreviousInjuries==true">Lesiones previas</h4>
+                     </div>
+            </div>     
+<!--//! -->
+<br>
+<br>
+         <div class="symtomps">             
+            <input type="checkbox" id="title1" />
+            <label for="title1">Sintomas</label>
+            <div class="content">
+                <br>
+                <h4 class="sintomas-signos" *ngIf=" aml.symptom.Fatigue==true"> Fatiga</h4>
+            <h4 class="sintomas-signos" *ngIf=" aml.symptom.ShortnessOfBreathDuringNormalPhysicalActivities==true">Falta de aliento durante las actividades físicas normales</h4>
+            <h4 class="sintomas-signos" *ngIf="  aml.symptom.Dizziness==true">Mareos</h4>
+            <h4 class="sintomas-signos" *ngIf=" aml.symptom.NightSweats==true">Sudores nocturnos</h4>
+            <h4 class="sintomas-signos" *ngIf="  aml.symptom.EnlargedSpleen==true">Agrandamiento del bazo</h4>
+            <h4 class="sintomas-signos" *ngIf="  aml.symptom.PainOrAFeelingOfFullnessUnderTheRibs==true">Dolor o sensación de saciedad debajo de las costillas</h4>
+            <h4 class="sintomas-signos" *ngIf="  aml.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans==true">Infecciones de la piel, pulmones, riñones u otros órganos </h4>
+             </div>
+        </div>  
+        <br>
+<br>
+            <!--//! -->
+        <div class="symtomps">   
+            <input type="checkbox" id="title2" />
+            <label for="title2">Signos</label>
+            <div class="content">
+                <br>
+                <h4 class="sintomas-signos" *ngIf=" aml.sign.Pallor==true">Palidez</h4>
+                <h4 class="sintomas-signos" *ngIf=" aml.sign.SwellingOfTheLymphNodes==true">Agrandamiento de los ganglios linfáticos </h4>
+                <h4 class="sintomas-signos" *ngIf=" aml.sign.FrequentInfections==true">Infecciones frecuentes</h4>
+                <h4 class="sintomas-signos" *ngIf=" aml.sign.Bruises==true">Moretones</h4>
+                <h4 class="sintomas-signos" *ngIf=" aml.sign.ProlongedBleedingFromMinorCuts==true">Sangrado prolongado por cortaduras leves</h4>
+                <h4 class="sintomas-signos" *ngIf=" aml.sign.AppearanceOfRedDotOnTheSkin==true">Aparición de punto rojo en la piel (Petequias)</h4>
+                <h4 class="sintomas-signos" *ngIf="  aml.sign.FrequentNosebleeds==true">Sangrados nasales frecuentes</h4>
+                <h4 class="sintomas-signos" *ngIf="  aml.sign.BleedingGums==true">Encías sangrantes</h4>
+                <h4 class="sintomas-signos" *ngIf="  aml.sign.BloodInTheUrine==true">Sangre en la orina</h4>
+                <h4 class="sintomas-signos" *ngIf="  aml.sign.Weightloss==true">Pérdida de peso </h4> </div>
+        </div>  
+        <br>
+<br>
+             <!--//! -->
+             <div class="symtomps">   
+                <input type="checkbox" id="title3" />
+                <label for="title3">Resultados de laboratorio</label>
+                <div class="content">
+                    <br>   <br>
+                 <h4 class="sintomas-signos" *ngIf="aml.labResult.InsufficientAmountOfRedBloodCells==true">Cantidad insuficiente de glóbulos rojos</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.labResult.InsufficientNumberOfPlatelets==true">Cantidad insuficiente de plaquetas</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.labResult.InsufficientAmountOfNeutrophils==true">Cantidad insuficiente de neutrófilos</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.labResult.Hyperdiploidy==true">Hiperdiploidía > 46 cromosomas</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.labResult.FusionGeneBCRABL1==true">Gen de fusión BCRABL1</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.labResult.Ikaros==true">Ikaros</h4>
+                    <h4 class="sintomas-signos" *ngIf="aml.labResult.ETP==true">ETP</h4>
+                </div>
+            </div>  
+         
+             
+        </div>
+    </div>
+    <div class="rec-3">
+        
+        <div class="estadio">
+            <h2 class="estadio-nombre">Estado: </h2>
+            <h2 class="estadio-positivo">Negativo</h2>
             
         </div>
-        <div class="rec-2">
-            <div class="titulo-cancer">
-                <h2>
-                    CÁNCER : LEUCEMIA
-                </h2>
-            </div>
-            <br>
-            <div class="resultados">
-                <h2 class="tipo-leucemia">
-                    Leucemia mileoide agua o AML
-                </h2>
-            </div>
-            <div class="sint-sig">
-                <div class="blanco">
+        <div class="blanco">
     
-                </div>
-                <div class="sintomas">
-             
-                    <h2 class="titulo-sintomas">Síntomas</h2>
-                    <br>
-                    <br>
-                    <div *ngIf=" !isPatient && showAml==false" ></div>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.symptom.Fatigue==true"> Fatiga</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.symptom.ShortnessOfBreathDuringNormalPhysicalActivities==true">Falta de aliento durante las actividades físicas normales</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.symptom.Dizziness==true">Mareos</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.symptom.NightSweats==true">Sudores nocturnos</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.symptom.EnlargedSpleen==true">Agrandamiento del bazo</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.symptom.PainOrAFeelingOfFullnessUnderTheRibs==true">Dolor o sensación de saciedad debajo de las costillas</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans==true">Infecciones de la piel, pulmones, riñones u otros órganos </h4>
-                </div>
-                <div class="signos">
-                    <h2 class="titulo-signos">Signos</h2>
-                    <div *ngIf=" !isPatient && showAml==false" ></div>
-                    <br>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.Pallor==true">Palidez</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.SwellingOfTheLymphNodes==true">Agrandamiento de los ganglios linfáticos </h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.FrequentInfections==true">Infecciones frecuentes</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.Bruises==true">Moretones</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.ProlongedBleedingFromMinorCuts==true">Sangrado prolongado por cortaduras leves</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.AppearanceOfRedDotOnTheSkin==true">Aparición de punto rojo en la piel (Petequias)</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.FrequentNosebleeds==true">Sangrados nasales frecuentes</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.BleedingGums==true">Encías sangrantes</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.BloodInTheUrine==true">Sangre en la orina</h4>
-                    <h4 class="sintomas-signos" *ngIf=" !isPatient && showAml==false && aml.sign.Weightloss==true">Pérdida de peso </h4>
-                </div>
-            </div>
         </div>
-        <div class="rec-3">
-            <div class="tratamiento">
-                <div class="text-tratamiento">
-                    <button id="boton-tratamiento" type="submit">
-                      TRATAMIENTO
-                    </button>
+        <div class="pre">
+            <h5 class="pre-descripcion">Este resultado tiene un 7.24% de falsos negativos de que el paciente padezca de la leucemia mieloide aguda (AML)</h5>
+          </div>
+          <div class="descrip">
+            <div class="blanco"></div>
+            <div class="t-descripcion">
+              <h2>Sugerencias de evaluación</h2>  
             </div>
-    
-            </div>
-            <div class="estadio">
-                <h2 class="estadio-nombre">Estado: </h2>
-                <h2 class="estadio-positivo">Negativo</h2>
+            <div class="p-descripcion">
+                <p>
+                    En base a los parámetros ingresados, se tiene como resultado de que el paciente tiene una baja probabilidad de padecer leucemia, con una precisión del 92.86%. 
+                <br> <br> <br>
+                Se recomienda realizar nuevamente una evaluación al paciente para determinar el tipo de enfermedad que padece.
+                </p>
                 
             </div>
-            <div class="blanco">
-    
-            </div>
-            <div class="pre">
-                <h5 class="pre-descripcion">Se tiene una probabilidad del 92.86% que el paciente no padece de la enfermedad de la leucemia mileoide aguda (AML)</h5>
-              </div>
-            <div class="descrip">
-                <div class="blanco"></div>
-                <div class="t-descripcion">
-                  <h2>Sugerencias de evaluación</h2>  
-                </div>
-                <div class="p-descripcion">
-                    <p>
-                        En base a los parámetros ingresados, se tiene como resultado de que el paciente tiene una baja probabilidad de padecer leucemia, con una precisión del 92.86%. 
-                    <br> <br> <br>
-                    Se recomienda realizar nuevamente una evaluación al paciente para determinar el tipo de enfermedad que padece.
-                    </p>
-                    
-                </div>
-            </div>
-            <div class="blanco"></div>
         </div>
-          
+        <div class="blanco"></div>
     </div>
-    
+      
+</div>
+

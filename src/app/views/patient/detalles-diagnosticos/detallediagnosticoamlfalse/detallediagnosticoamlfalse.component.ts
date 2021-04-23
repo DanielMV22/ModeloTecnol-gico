@@ -14,7 +14,9 @@ export class DetallediagnosticoamlfalseComponent  {
   @Input() isPatient:boolean;
   @Input() showAml:boolean;
 
+  
+  
   constructor() { }
 
-
+  
 }

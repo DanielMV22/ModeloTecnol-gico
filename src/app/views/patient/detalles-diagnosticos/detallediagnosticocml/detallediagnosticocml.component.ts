@@ -12,9 +12,14 @@ export class DetallediagnosticocmlComponent  {
   @Input() cml: Cml;
   @Input() isPatient:boolean;
   @Input() showCml:boolean;
+  showGeneral=true;
 
   constructor() { }
 
- 
+  
+  onSendCardsTratamientoAll(){
+    this.showGeneral=false;
+  }
+
 
 }

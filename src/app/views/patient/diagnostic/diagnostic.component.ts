@@ -27,25 +27,25 @@ export class DiagnosticComponent implements OnInit{
   isExpandedC: boolean;
 
 //! AML
-  show=false;
+  show:boolean=null;
   showAml=true;
   showfalse=true;
   
 //!ALL
 
-  showA=false;
+  showA:boolean=null;
   showAll=true;
   showAfalse=true;
 
   //!CLL
 
-  showB=false;
+  showB:boolean=null;
   showCll=true;
   showBfalse=true;
 
    //!CML
 
-   showC=false;
+   showC:boolean=null;
    showCml=true;
    showCfalse=true;
  
@@ -104,36 +104,14 @@ export class DiagnosticComponent implements OnInit{
   }
 
   limpiar(){
-    if(this.showfalse==true){
-      this.showfalse=false;
-    }else{
-    this.showfalse=true;
-    }
-    if(this.showAfalse==true){
-      this.showAfalse=false;
-    }else{
-    this.showAfalse=true;
-    }
-    if(this.showBfalse==true){
-      this.showBfalse=false;
-    }else{
-    this.showBfalse=true;
-    }
-    if(this.showCfalse==true){
-      this.showCfalse=false;
-    }else{
-    this.showCfalse=true;
-    }
+  
    
   }
   
 
   onBack(){
     this.isPatient=true;
-    this.show=false;
-    this.showA=false;
-    this.showB=false;
-    this.showC=false;
+    
     this.all=new All();
     this.cll=new Cll();
     this.aml=new Aml();
@@ -141,32 +119,100 @@ export class DiagnosticComponent implements OnInit{
   }
 
   onSendCardsAll(){
-    this.medicalService.addAll(this.all).subscribe((response: All)=> console.log(response));
+   // this.medicalService.addAll(this.all).subscribe((response: All)=> console.log(response));
     //console.log(this.all);
 
     this.showA=true;
     this.showAll=false;
+    if( 
+      (!this.all.general.Age || !this.all.general.AdvancedPaternalAge || !this.all.general.MaternalFetalLoss || !this.all.general.XRayExposureAtBirth || !this.all.general.PreviousChemotherapyOrRadiotherapy || !this.all.general.InheritedConditions
+      || !this.all.sign.Pallor || !this.all.sign.EnlargedLiverOrSpleen
+      || !this.all.symptom.ProlongedFever 
+      || !this.all.labResult.LeukemicBlasts || !this.all.labResult.WhiteBloodCellCount && !this.all.labResult.PositiveCytogeneticAnalysis)
+       && 
+      ( !this.all.general.Age || !this.all.general.AdvancedPaternalAge || !this.all.general.PreviousChemotherapyOrRadiotherapy ||  
+        !this.all.sign.Pallor || !this.all.sign.EnlargedLiverOrSpleen ||
+        !this.all.labResult.LeukemicBlasts || !this.all.labResult.WhiteBloodCellCount || !this.all.labResult.PositiveCytogeneticAnalysis)
+        && 
+        (!this.all.general.MaternalFetalLoss || !this.all.general.XRayExposureAtBirth || !this.all.general.PreviousChemotherapyOrRadiotherapy ||
+          !this.all.sign.EnlargedLiverOrSpleen ||  
+          !this.all.symptom.ProlongedFever  || 
+          !this.all.labResult.WhiteBloodCellCount  || !this.all.labResult.PositiveCytogeneticAnalysis))
+       {
+        this.showA=false;
+    } 
+   
+   
+   
+    
   }
   
   onSendCardsCll(){
-    this.medicalService.addCll(this.cll).subscribe((response: Cll )=> console.log(response));
+    //this.medicalService.addCll(this.cll).subscribe((response: Cll )=> console.log(response));
 
     this.showB=true;
     this.showCll=false;
-   // console.log(this.cll);
+   if (
+     (!this.cll.general.PreviousDiseases || 
+    !this.cll.sign.EnlargedLymphNodes  ||  !this.cll.sign.LowGradeFever ||  !this.cll.sign.Fatigue ||  !this.cll.sign.Weightloss || 
+    !this.cll.symptom.NightSweats || !this.cll.symptom.FeelingFull || !this.cll.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans || !this.cll.symptom.ShortOfBreath || !this.cll.symptom.Exhausted || 
+     !this.cll.labResult.InsufficientNumberOfPlatelets || !this.cll.labResult.CD38 || !this.cll.labResult.Beta2Microglobulin || !this.cll.labResult.AbnormalIncreaseLymphocytesBlood || !this.cll.labResult.Anemia)
+      && 
+     (!this.cll.general.PreviousDiseases || 
+      !this.cll.sign.Fatigue ||  !this.cll.sign.Weightloss || 
+      !this.cll.symptom.NightSweats || !this.cll.symptom.Exhausted || 
+      !this.cll.labResult.InsufficientNumberOfPlatelets || !this.cll.labResult.CD38 || !this.cll.labResult.Beta2Microglobulin || !this.cll.labResult.AbnormalIncreaseLymphocytesBlood || !this.cll.labResult.Anemia )
+      && (!this.cll.general.PreviousDiseases 
+        ||  !this.cll.sign.Weightloss || 
+        !this.cll.symptom.NightSweats || !this.cll.symptom.FeelingFull ||  
+        !this.cll.labResult.InsufficientNumberOfPlatelets || !this.cll.labResult.Beta2Microglobulin || !this.cll.labResult.AbnormalIncreaseLymphocytesBlood || !this.cll.labResult.Anemia)
+      ){
+        this.showB=false;
+   }
   }
   onSendCardsAml(){
-    this.medicalService.addAml(this.aml).subscribe((response: Aml)=> console.log(response));
+    //this.medicalService.addAml(this.aml).subscribe((response: Aml)=> console.log(response));
     this.show=true;
     this.showAml=false;
 
-    console.log(this.aml.sign.AppearanceOfRedDotOnTheSkin);
+    if ((!this.aml.general.DNADamage || !this.aml.general.PreviousDiseases ||
+      !this.aml.sign.ProlongedBleedingFromMinorCuts || !this.aml.sign.SwellingOfTheLymphNodes  ||  !this.aml.sign.Pallor  || 
+      !this.aml.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans  ||  !this.aml.symptom.NightSweats || !this.aml.symptom.Fatigue ||
+      !this.aml.labResult.Hyperdiploidy ||  !this.aml.labResult.InsufficientNumberOfPlatelets || !this.aml.labResult.InsufficientAmountOfNeutrophils || !this.aml.labResult.InsufficientAmountOfRedBloodCells)
+      && 
+      (!this.aml.general.DNADamage || !this.aml.general.PreviousDiseases ||
+        !this.aml.sign.Weightloss || !this.aml.sign.SwellingOfTheLymphNodes || !this.aml.sign.AppearanceOfRedDotOnTheSkin ||
+        !this.aml.symptom.InfectionOfTheSkinLungsKidneysOrOtherOrgans ||  !this.aml.symptom.Dizziness ||
+        !this.aml.labResult.ETP || !this.aml.labResult.InsufficientAmountOfRedBloodCells )
+      ) {
+        this.show=false;
+    }
   }
   onSendCardsCml(){
-    this.medicalService.addCml(this.cml).subscribe((response: Cml)=> console.log(response));
+    //this.medicalService.addCml(this.cml).subscribe((response: Cml)=> console.log(response));
 
     this.showC=true;
     this.showCml=false;
+
+    if (
+      (!this.cml.general.RadiationExposure || !this.cml.general.DNADamage || 
+      !this.cml.sign.UnexplainedWeightLoss || !this.cml.sign.GumOrNoseBleeds ||  !this.cml.sign.Bruising ||  !this.cml.sign.ProlongedBleedingFromMinorCuts  ||  
+      !this.cml.symptom.Fever || !this.cml.symptom.FeelingTired || !this.cml.symptom.Dizziness  || 
+      !this.cml.labResult.InsufficientAmountOfRedBloodCells || !this.cml.labResult.PhiladelphiaChromosome)
+      &&
+      (!this.cml.general.RadiationExposure || !this.cml.general.DNADamage || 
+        !this.cml.sign.GumOrNoseBleeds || !this.cml.sign.Bruising ||  !this.cml.sign.DisseminatedNodules || 
+        !this.cml.symptom.Drowsiness || !this.cml.symptom.Headache || !this.cml.symptom.BlurryVision 
+        || !this.cml.labResult.ElevatedNumberOfWhiteBloodCells  || !this.cml.labResult.InsufficientAmountOfRedBloodCells
+         || !this.cml.labResult.FusionGeneBCRABL1)
+         &&
+       (!this.cml.general.RadiationExposure || 
+      !this.cml.symptom.Fatigue || !this.cml.symptom.Dizziness  || 
+      !this.cml.sign.Pallor ||  !this.cml.sign.Bruising ||  !this.cml.sign.Infections ||  
+      !this.cml.labResult.ElevatedNumberOfWhiteBloodCells  || !this.cml.labResult.InsufficientAmountOfRedBloodCells || !this.cml.labResult.PhiladelphiaChromosome)
+      ) {
+      this.showC=false;
+    }
 
   }
 
