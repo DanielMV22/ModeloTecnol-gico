@@ -51,11 +51,17 @@ export class PatientComponent implements OnInit, OnDestroy {
     this.dtTrigger.unsubscribe();
   }
 
-
-
   onNew() {
     this.patientNew = new Patient();
     this.largeModal.show();
+  }
+
+  inputCheck(){  
+    if(this.patientNew.id.length < 7 && this.patientNew.id.length > 0  && this.patientNew.friendlyName.length < 5 && this.patientNew.friendlyName.length > 0){
+      return false; 
+    }else{
+      return true; 
+    }
   }
 
   onSaveEdit() {
