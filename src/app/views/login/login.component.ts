@@ -12,13 +12,21 @@ export class LoginComponent {
 
   constructor(private route:Router){}
 
+  inputCheck(){  
+    if(this.username.length < 11 && this.username.length > 4  && this.password.length < 11 && this.password.length > 5){
+      return false; 
+    }else{
+      return true; 
+    }
+  }
+
   onClick(){
     console.log(this.username);
     console.log(this.password);
-    if(this.username=="admin" && this.password=="admin"){
+    if(this.username=="admin1" && this.password=="admin1"){
       this.route.navigate(['/dashboard']);
     }else{
-      alert('Acceso denegado');
+      alert('El usuario o contraseña son incorrectos');
       this.password='';
       this.route.navigate(['/login']);
     }
