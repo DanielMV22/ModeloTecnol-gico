@@ -24,7 +24,7 @@ export class LoginComponent {
     console.log(this.username);
     console.log(this.password);
     if(this.username=="admin1" && this.password=="admin1"){
-      this.route.navigate(['/dashboard']);
+      this.route.navigate(['/patient/list']);
     }else{
       alert('El usuario o contraseña son incorrectos');
       this.password='';

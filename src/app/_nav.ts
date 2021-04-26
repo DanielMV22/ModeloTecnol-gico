@@ -2,13 +2,10 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'Dashboard',
-    url: '/dashboard',
+    title: true,
+    name: 'MEDICAL DIAGNOSTIC',
+    url: '/patient/list',
     icon: 'icon-speedometer',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
   },
   {
     title: true,
@@ -52,7 +49,7 @@ export const navItems: INavData[] = [
     name: 'Solicitud'
   },
   {
-    name: 'Ticket',
+    name: 'Notificaciones',
     url: '/patient/ticket',
     icon: 'icon-list'
    }
