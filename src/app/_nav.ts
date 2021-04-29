@@ -26,21 +26,9 @@ export const navItems: INavData[] = [
     icon: 'icon-notebook',
     children: [
       {
-        name: 'Cartillas',
+        name: 'Predicción',
         url: '/patient/diagnostic',
         icon: 'icon-docs'
-      }
-    ]
-  },
-  {
-    name: 'Tratamiento',
-    url: '/patient',
-    icon: 'icon-notebook',
-    children: [
-      {
-        name: 'Cards',
-        url: '/patient/treatment',
-        icon: 'icon-puzzle'
       }
     ]
   },
