@@ -104,7 +104,8 @@ export class DiagnosticComponent implements OnInit{
   }
 
   limpiar(){
-  
+    this.patient=false;
+    this.disease=false;
    
   }
   

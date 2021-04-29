@@ -12,7 +12,7 @@
 
 .general{
     margin:auto;
-    margin-top: 10px;
+    margin-top: -50px; margin-left: 15px;
  
  /*   /* border-style: solid; */
     /*width: 1500px;*/
@@ -75,7 +75,7 @@ img{
     float:left;
   /*  /* border-style: solid; */
     overflow: scroll;
-
+    overflow-x: hidden;
 }
 
 ol{
@@ -176,7 +176,7 @@ li{
     height: 45px;
     font-family: 'Dela Gothic One', cursive;
     font-weight: 300;
-    text-align: center;
+    text-align: center;margin-left: 0px
     /* /* border-style: solid; */
 /*  background-color: green;*/
 }
@@ -299,7 +299,7 @@ li{
 
 .tipo-leucemia{
     margin-right: 45px;
-    font-family: 'Zilla Slab Highlight', cursive;
+    font-family: 'Exo', sans-serif;
    /* font-family: 'Exo', sans-serif; */
     font-weight: 400;
  
@@ -314,7 +314,6 @@ li{
      /* border-style: solid; */
    /* background-color: skyblue;*/
     float:right;
-    overflow: scroll;
 }
 
 
@@ -374,7 +373,7 @@ li{
     height: 50px;
 }
 .estadio-nombre{
-    margin-left: 155px;
+    margin-left: 170px;
     font-family: 'Exo', sans-serif;
 }
 .estadio-positivo{
@@ -449,7 +448,7 @@ li{
 
 .tratamiento{
   width: 120px;
-  height: 120px;
+  height: 120px;margin-left: 15px;
   /* border-style: solid; */
   text-align: center;
   width: 635px;

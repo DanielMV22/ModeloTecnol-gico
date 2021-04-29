@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,500;1,400&display=swap');
 
+*{
+
+  padding: 0px;
+
+
+}
 .general{
     margin:auto;
-    margin-top: 10px;
+    margin-top: -50px; margin-left: 15px;
  
      /*/*border-style: solid; */
     /*width: 1500px;*/
     /*height: 900px;*/
     width: 1600px;
-    height: 900px;
+    height: 1300px;
    /* background-color:aqua;*/
     border-style:groove;
-   
+    overflow: hidden;
 }
 img{
     margin: 1em;
@@ -73,7 +79,7 @@ img{
   width: 1550px;
   margin-left: 90px;
   text-align: center;
-  font-family: 'Zilla Slab Highlight', cursive;
+  font-family: 'Exo', sans-serif;
 }
 .rec-4{
    
@@ -99,7 +105,7 @@ img{
     /*/*border-style: solid; */
    
     float:left;
-    overflow: scroll;
+  /* overflow: scroll; */
 
 }
 
@@ -110,7 +116,7 @@ img{
     width: 700px;
     height: 60px;
     text-align: center;
-    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Exo', sans-serif;
     font-weight: 300;
  
       /*border-style: solid; */
@@ -210,7 +216,7 @@ hr{
     width: 1450px;
     height: 60px;
     text-align: center;
-    font-family: 'Zilla Slab Highlight', cursive;
+    font-family: 'Exo', sans-serif;
     font-weight: 300;
  
       /*/*border-style: solid; */
@@ -232,16 +238,24 @@ hr{
     /*background-color: green;*/
 }
 
+.quimio-tep{
+margin-left: 20px;
+}
+.sub-quimio-tep{
+  margin-left: 36px;
+}
+
 .detalle-quimioterapia{
     margin: 1em;
     margin-top: 10px;
-    margin-left: 25px;
-    width: 1450px;
-    height: 200px;
-    text-align: center;
+    margin-left: 240px;
+    width: 925px;
+    height: 300px;
+    text-align: left;
       /*/*border-style: solid; */
       font-family: 'Exo', sans-serif;
     /*background-color: green;*/
+
 }
 
 .fadeTexto{

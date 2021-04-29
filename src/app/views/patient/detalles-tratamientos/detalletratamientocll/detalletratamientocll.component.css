@@ -1,19 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,500;1,400&display=swap');
 
-.general{
-    margin:auto;
-    margin-top: 10px;
- 
-     /*/*border-style: solid; */
-    /*width: 1500px;*/
-    /*height: 900px;*/
-    width: 1600px;
-    height: 900px;
-   /* background-color:aqua;*/
-    border-style:groove;
-   
+*{
+
+  padding: 0px;
+
+
 }
+.general{
+  margin:auto;
+  margin-top: -50px; margin-left: 15px;
+
+   /*/*border-style: solid; */
+  /*width: 1500px;*/
+  /*height: 900px;*/
+  width: 1600px;
+  height: 1370px;
+ /* background-color:aqua;*/
+  border-style:groove;
+  overflow: hidden;
+}
+.quimio-tep{
+  margin-left: 20px;
+  }
+  .sub-quimio-tep{
+    margin-left: 36px;
+  }
 img{
     margin: 1em;
     width: 110px;
@@ -73,7 +85,7 @@ img{
   width: 1550px;
   margin-left: 90px;
   text-align: center;
-  font-family: 'Zilla Slab Highlight', cursive;
+  font-family: 'Exo', sans-serif;
 }
 .rec-4{
    
@@ -91,15 +103,15 @@ img{
 }
 
 .rec-3{
-    margin: 1em;
-    margin-top: 5px;
-    margin-left: 90px;
-    width: 1490px;
-    height: 430px;
-    /*/*border-style: solid; */
-   
-    float:left;
-    overflow: scroll;
+  margin: 1em;
+  margin-top: 5px;
+  margin-left: 90px;
+  width: 1490px;
+  height: 430px;
+  /*/*border-style: solid; */
+ 
+  float:left;
+/* overflow: scroll; */
 
 }
 
@@ -110,7 +122,7 @@ img{
     width: 700px;
     height: 60px;
     text-align: center;
-    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Exo', sans-serif;
     font-weight: 300;
  
       /*border-style: solid; */
@@ -152,22 +164,14 @@ hr{
 
 }
 .descripcion-resultados{
-    margin: 1em;
-    margin-top: 15px;
-    margin-left: 45px;
-    font-family: 'Zilla Slab Highlight', cursive;
-   /* font-family: 'Exo', sans-serif; */
-    font-weight: 400;
-    width: 1450px;
-    height: 60px;
-    text-align: center;
-      /*/*border-style: solid; */
-     
-    
-   /* font-family: 'Exo', sans-serif; */
-   
-  
-    /*background-color: green;*/
+  margin: 1em;
+  margin-top: 15px;
+  margin-left: 45px;
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 400;
+  width: 1450px;
+  height: 60px;
+  text-align: center;
 }
 
 .titulo-pediatrico{
@@ -210,7 +214,7 @@ hr{
     width: 1450px;
     height: 60px;
     text-align: center;
-    font-family: 'Zilla Slab Highlight', cursive;
+    font-family: 'Exo', sans-serif;
     font-weight: 300;
  
       /*/*border-style: solid; */
@@ -233,12 +237,12 @@ hr{
 }
 
 .detalle-quimioterapia{
-    margin: 1em;
+  margin: 1em;
     margin-top: 10px;
-    margin-left: 25px;
-    width: 1450px;
-    height: 200px;
-    text-align: center;
+    margin-left: 240px;
+    width: 925px;
+    height: 300px;
+    text-align: left;
       /*/*border-style: solid; */
       font-family: 'Exo', sans-serif;
     /*background-color: green;*/

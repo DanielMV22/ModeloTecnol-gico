@@ -1,7 +1,10 @@
+
 <div class="animated fadeIn">
+    <div style="margin-top: 75px; ">
     <div class="row" *ngIf="isPatient">
         <div class="col-md-6" align="center">
             <div class="card">
+               
                 <div class="card-header">
                     <strong>Diagnóstico</strong>
                 </div>
@@ -31,12 +34,16 @@
                 <div class="card-footer">
                     <button type="submit" class="btn btn-sm btn-primary" (click)="onCards()">
                       <i class="fa fa-dot-circle-o"></i>
-                      Aceptar</button>
+                      Aceptar</button> <button type="reset" class="btn btn-sm btn-danger" (click)="limpiar()">
+                        <i class="fa fa-ban"></i>
+                         Limpiar</button>
                 </div>
             </div>
+
+
         </div>
     </div>
-
+</div>
 
    
     <div class="row" *ngIf="!isPatient && disease==0">
@@ -1074,7 +1081,7 @@
         </div>
         <!--//!.col-->
 
-        
+    
     </div>
   <!--/.col-->
 

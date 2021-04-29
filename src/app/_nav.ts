@@ -21,7 +21,7 @@ export const navItems: INavData[] = [
     name: 'Analisis'
   },
   {
-    name: 'Diagnostico',
+    name: 'Diagnostico y Tratamiento',
     url: '/patient',
     icon: 'icon-notebook',
     children: [

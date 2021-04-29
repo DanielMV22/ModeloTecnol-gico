@@ -23,6 +23,9 @@ export class TicketComponent implements OnInit {
   ngOnInit() {
     this.dtOptions = {
       dom: 'Bfrtip',
+      language: {
+        url:'//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json'
+      },
       buttons: []
     };
     this.medicalService.getTickets().subscribe(

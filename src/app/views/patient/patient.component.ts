@@ -26,6 +26,9 @@ export class PatientComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.dtOptions = {
       dom: 'Bfrtip',
+      language: {
+        url:'//cdn.datatables.net/plug-ins/1.10.21/i18n/Spanish.json'
+      },
       buttons: [ 'excel']
     };
     if (this.localPatient != null) {
