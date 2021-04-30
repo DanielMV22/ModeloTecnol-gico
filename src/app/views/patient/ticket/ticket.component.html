@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="card-header">
                     <i class="fa fa-align-justify"></i> Notificaciones
-                    <button class="btn btn-primary" style="float: right;" data-toggle="modal" (click)="onNew()">Crear Ticket</button>
+                    <button class="btn btn-primary" style="float: right;" data-toggle="modal" (click)="onNew()">Generar Ticket</button>
                 </div>
                 <div class="card-body">
                     <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover" style="width: 100%;">
@@ -19,7 +19,7 @@
                         <tbody>
                             <ng-container *ngFor="let tick of tickets">
                                 <tr>
-                                    <td>{{tick.ticket}}</td>
+                                    <td>{{tick.ticketId}}</td>
                                     <td>{{tick.tittle}}</td>
                                     <td>{{tick.date}}</td>
                                 </tr>
@@ -35,12 +35,18 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Agregar Ticket</h4>
+                <h4 class="modal-title">Generar Ticket</h4>
                 <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
             </div>
             <div class="modal-body">
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="title">Remitente</label>
+                        <input type="text" class="form-control" id="title" placeholder="xxx@xxx.essalud.pe" [(ngModel)]="ticketNew.sender">
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col form-group">
                         <label for="title">Título</label>
@@ -56,7 +62,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" (click)="largeModal.hide()">Cerrar</button>
-                <button type="button" class="btn btn-primary" (click)="onSaveEdit()">Guardar</button>
+                <button type="button" class="btn btn-primary" button [disabled]="inputCheck()" (click)="onSaveEdit()">Enviar</button>
             </div>
         </div>
     </div>

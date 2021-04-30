@@ -1,10 +1,12 @@
 export class Ticket {
-    ticket:string
+    ticketId:string
+    sender:string
     tittle:string
     description:string
     date:any
     constructor(){
-        this.ticket='',
+        this.ticketId='#TK',
+        this.sender='',
         this.tittle='',
         this.description='',
         this.date=''

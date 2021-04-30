@@ -46,8 +46,18 @@ export class TicketComponent implements OnInit {
     this.largeModal.show();
   }
 
+  inputCheck(){  
+    if(this.ticketNew.sender.length < 25 && this.ticketNew.sender.length > 12  
+      && this.ticketNew.tittle.length < 71 && this.ticketNew.tittle.length > 5
+      && this.ticketNew.description.length < 250){
+      return false; 
+    }else{
+      return true; 
+    }
+  }
+
   onSaveEdit() {
-    this.ticketNew.ticket='#TK002';//CAMBIAR CON UN EVENTO  
+    this.ticketNew.ticketId=this.ticketNew.ticketId+'002';//CAMBIAR CON UN EVENTO  
     this.ticketNew.date=this.fecha.getDate()+'/'+this.fecha.getMonth()+'/'+this.fecha.getFullYear();
     this.tickets.push(this.ticketNew);
     // this.medicalService.writeLocall("patient", this.tickets);
