@@ -57,7 +57,7 @@ export class TicketComponent implements OnInit {
   }
 
   onSaveEdit() {
-    this.ticketNew.ticketId=this.ticketNew.ticketId+'002';//CAMBIAR CON UN EVENTO  
+    this.ticketNew.ticketId=this.ticketNew.ticketId+this.tickets.length.toString();//CAMBIAR CON UN EVENTO  
     this.ticketNew.date=this.fecha.getDate()+'/'+this.fecha.getMonth()+'/'+this.fecha.getFullYear();
     this.tickets.push(this.ticketNew);
     // this.medicalService.writeLocall("patient", this.tickets);
