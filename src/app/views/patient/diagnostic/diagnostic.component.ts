@@ -16,8 +16,9 @@ export class DiagnosticComponent implements OnInit{
   patient;
   patientList=[];
   
-  required=false;
-
+required=null;
+  required1=null;
+  required2=null;
 
   localPatient:any;
 
@@ -93,20 +94,34 @@ export class DiagnosticComponent implements OnInit{
   }
 
   onCards(){
-    if(!this.patient) {
+    if(!this.patient && !this.disease) { 
       this.required=true;
+      return;
+    }else if (!this.patient){
+      this.required1=true;
+      return;
+    }else if (!this.disease){
+      this.required2=true;
       return;
     }
     this.isPatient=false;
-   
-    this.required=false;
+    
     console.log(this.patient);
   }
 
   limpiar(){
     this.patient=false;
     this.disease=false;
-   
+    if(this.required1==true){
+      this.required1=false;
+    }
+    if(this.required2==true){
+      this.required2=false;
+    }
+    if(this.required==true){
+      this.required=false;
+    }
+  
   }
   
 

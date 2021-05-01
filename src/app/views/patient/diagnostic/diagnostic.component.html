@@ -17,7 +17,10 @@
                                   <option *ngFor="let pat of patientList" [value]="pat.id">{{pat.friendlyName}}
                                   </option>
                               </select>
-                                <span *ngIf="required" class="help-block">*Campo requerido</span>
+                                <span *ngIf="required==true" class="help-block">*Campo requerido</span>
+                                <span *ngIf="required1==true" class="help-block">*Campo requerido</span>
+                                <span *ngIf="required1==false" class="help-block"></span>
+                                <span *ngIf="required==false" class="help-block"></span>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -26,7 +29,10 @@
                                 <select class="form-control" id="disease" [(ngModel)]="disease" name="disease">
                                   <option *ngFor="let dis of diseaseList" [value]="dis.id">{{dis.name}}</option>
                               </select>
-                                <span *ngIf="required" class="help-block">*Campo requerido</span>
+                                <span *ngIf="required==true"  class="help-block">*Campo requerido</span>
+                                <span *ngIf="required2==true"  class="help-block">*Campo requerido</span>
+                                <span *ngIf="required2==false" class="help-block"></span>
+                                <span *ngIf="required==false" class="help-block"></span>
                             </div>
                         </div>
                     </form>
