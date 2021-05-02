@@ -40,7 +40,12 @@ export const navItems: INavData[] = [
     name: 'Notificaciones',
     url: '/patient/ticket',
     icon: 'icon-list'
-   }
+   },
+   {
+     name: 'Salir',
+     url: '/login/',
+     icon: 'icon-off'
+    }
   // ,{
   //   name: 'Base',
   //   url: '/base',
