@@ -16,6 +16,7 @@ export class TicketComponent implements OnInit {
   fecha = new Date();
   dtOptions: any = {};
   dtTrigger: Subject<any> = new Subject<any>();
+  numTickets = new Number();
 
   constructor(private medicalService: MedicalService) {
   }
@@ -57,7 +58,10 @@ export class TicketComponent implements OnInit {
   }
 
   onSaveEdit() {
-    this.ticketNew.ticketId=this.ticketNew.ticketId+this.tickets.length.toString();//CAMBIAR CON UN EVENTO  
+    this.numTickets = this.tickets.length;
+    if(this.numTickets<100) this.ticketNew.ticketId=this.ticketNew.ticketId + "0";
+    if(this.numTickets<10) this.ticketNew.ticketId=this.ticketNew.ticketId + "0";
+    this.ticketNew.ticketId=this.ticketNew.ticketId+this.tickets.length.toString();  
     this.ticketNew.date=this.fecha.getDate()+'/'+this.fecha.getMonth()+'/'+this.fecha.getFullYear();
     this.tickets.push(this.ticketNew);
     // this.medicalService.writeLocall("patient", this.tickets);
