@@ -1,7 +1,7 @@
 {
     "data":[
         {
-            "ticket":"#TK001",
+            "ticketId":"#TK001",
             "tittle":"Falla en el análisis predictivo",
             "description":"una descripción",
             "date":"01/02/2021"
